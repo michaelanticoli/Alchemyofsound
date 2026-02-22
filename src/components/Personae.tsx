@@ -1,10 +1,10 @@
 // Placeholder images - replace with actual uploaded images via admin panel
 const redCasketImage1 =
-  "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1080";
+  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Red%20casket%20club(4).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9SZWQgY2Fza2V0IGNsdWIoNCkucG5nIiwiaWF0IjoxNzcxNDEyNTc0LCJleHAiOjE3NzE0MTYxNzR9.mOHlkHi3Cv940ZWehJtyIyz0K2u3e5wzfFPDhbaZi_g";
 const redCasketImage2 =
-  "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?q=80&w=1080";
+  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Red%20casket%20club(6).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9SZWQgY2Fza2V0IGNsdWIoNikucG5nIiwiaWF0IjoxNzcxNDEyNjM4LCJleHAiOjE3NzE0MTYyMzh9.vhbbkcAbCWisZKv32W8MDF-dJJlbfq6kokMYq9LHZK0";
 const redCasketImage3 =
-  "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1080";
+  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Red%20casket%20club.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9SZWQgY2Fza2V0IGNsdWIucG5nIiwiaWF0IjoxNzcxNDEyNjY3LCJleHAiOjE3NzE0MTYyNjd9.8Y-tWYAN2eLARXGDp9awpXaKcHo7Tkcpx3ZZ95b9_fA";
 const silasGoghImage1 =
   "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1080";
 const silasGoghImage2 =

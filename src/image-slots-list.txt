@@ -1,0 +1,72 @@
+FRAMEWORKS
+
+Quantumelodies
+1. Quantumelodies_img1
+2. Quantumelodies_img2
+3. Quantumelodies_img3
+4. Quantumelodies_img4
+5. Quantumelodies_img5
+6. Quantumelodies_img6
+7. Quantumelodies_img7
+
+The On Being Series
+1. OnBeing_img1
+2. OnBeing_img2
+3. OnBeing_img3
+4. OnBeing_img4
+5. OnBeing_img5
+
+Creative Alchemy
+1. CreativeAlchemy_img1
+2. CreativeAlchemy_img2
+3. CreativeAlchemy_img3
+4. CreativeAlchemy_img4
+5. CreativeAlchemy_img5
+
+Moontuner
+1. Moontuner_img1
+2. Moontuner_img2
+3. Moontuner_img3
+4. Moontuner_img4
+5. Moontuner_img5
+
+Astroharmonic Research
+1. AstroharmonicResearch_img1
+2. AstroharmonicResearch_img2
+3. AstroharmonicResearch_img3
+4. AstroharmonicResearch_img4
+5. AstroharmonicResearch_img5
+
+Lyrix Prism
+1. LyrixPrism_img1
+2. LyrixPrism_img2
+3. LyrixPrism_img3
+4. LyrixPrism_img4
+5. LyrixPrism_img5
+
+PERSONAE
+
+Ang Bocca
+1. AngBocca_img1
+
+Silas Gogh
+1. SilasGogh_img1
+2. SilasGogh_img2
+3. SilasGogh_img3
+
+Red Casket Club
+1. RedCasketClub_img1
+2. RedCasketClub_img2
+3. RedCasketClub_img3
+
+Brokeback Kerouac
+1. BrokebackKerouac_img1
+2. BrokebackKerouac_img2
+
+Nadia Bizness
+1. NadiaBizness_img1
+
+Amon Ajari
+1. AmonAjari_img1
+
+TOTAL: 47 image slots

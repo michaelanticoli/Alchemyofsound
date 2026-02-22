@@ -17,11 +17,11 @@ const frameworks: FrameworkData[] = [
       "Archetypal Data Visualization"
     ],
     images: [
-      "figma:asset/29f617ea2006006fb272d2b5d6c44f083bd6b687.png",
-      "figma:asset/de7fa817407f69556d10249bd830e6ecf16c78c2.png",
-      "https://imgur.com/a/6mR14jG", // Sacred Geo
-      "https://images.unsplash.com/photo-1637434325847-7bb5b9ecde33?q=80&w=1080", // Celestial Map
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1080", // Star Field
+      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/**QUantumelodic%20MOckup***.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy8qKlFVYW50dW1lbG9kaWMgTU9ja3VwKioqLmpwZWciLCJpYXQiOjE3NzE0NjU5MDAsImV4cCI6MTc3MTQ2OTUwMH0.RwkzLmtCgMFADBTGC9OL-OscIhImfc2V_KkI94dRukY",
+      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/**QUantumelodic%20MOckup***.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy8qKlFVYW50dW1lbG9kaWMgTU9ja3VwKioqLmpwZWciLCJpYXQiOjE3NzE0MTI4MTcsImV4cCI6MTc3MTQxNjQxN30.5Sn7Rj1sKD88k3rOUYRHJp3bwplp0vq8eD16u9r0iPM",
+      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Whisk_089d5063671bc4ab6164241402e2de82dr.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9XaGlza18wODlkNTA2MzY3MWJjNGFiNjE2NDI0MTQwMmUyZGU4MmRyLmpwZWciLCJpYXQiOjE3NzE0MTI4ODMsImV4cCI6MTc3MTQxNjQ4M30.JkWLSR8Jm1_oqx_PSzujHq-L-v89FnlXpVmSUkjmIm4", // Sacred Geo
+      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Quantum%20Vibrations_%20Harmonizing%20Astrology,%20Music,%20and%20the%20Resonant%20Mind-3.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9RdWFudHVtIFZpYnJhdGlvbnNfIEhhcm1vbml6aW5nIEFzdHJvbG9neSwgTXVzaWMsIGFuZCB0aGUgUmVzb25hbnQgTWluZC0zLmpwZyIsImlhdCI6MTc3MTQxMjkzNCwiZXhwIjoxNzcxNDE2NTM0fQ.vHKpwl2dY3aj32LYufoFtADxYki7bXU0V0G2EaFkt0g", // Celestial Map
+      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/EXPLAIN%20TO%20ME.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9FWFBMQUlOIFRPIE1FLnBuZyIsImlhdCI6MTc3MTQxMjk2OSwiZXhwIjoxNzcxNDE2NTY5fQ.uK8p37fOgckr3TTfNiCJn-TsO-KDXuie1MO58t4Xxmk", // Star Field
       "https://images.unsplash.com/photo-1465101162946-4377e57745c3?q=80&w=1080", // Galaxy
       "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=1080"  // Rain/Stars
     ]
@@ -29,14 +29,14 @@ const frameworks: FrameworkData[] = [
   {
     title: "The On Being Series",
     subtitle: "Psychoacoustic Archetypes",
-    description: "A longform exploration of archetypal psychology through piano and production — each étude a sonic mirror of the self.",
-    longDescription: "The On Being Series is a collection of sonic essays. It rejects the standard verse-chorus structure in favor of 'emotional arcs'—compositions designed to induce specific states of reflection. Utilizing minimalist piano motifs layered with field recordings and granular synthesis, the series explores the quiet violence and profound stillness of the human experience.",
+    description: "A four-album tarot system translating the Minor Arcana into 56 piano etudes—elemental sonic landscapes for intuitive divination.",
+    longDescription: "The On Being Series is a 4-album project representing the elemental suits of the Tarot: Stones (Earth), Vessels (Water), Sparks (Fire), and Blades (Air). Each album contains 14 purely piano-based improvisational avant-garde etudes—one for each of the Minor Arcana pip cards. The 56 tracks do not display which traditional card they represent; instead, they beckon the listener to assign their own meanings to the sonic landscapes and form intuitive relationships with the music. Once intimately familiar with the compositions, the listener is invited to put the entire project on shuffle and let the first 3, 7, or any number of songs serve as a 'spread' for a sonic reading—a modular assembly that seamlessly stitches together into narrative storyboards with hundreds of combinational possibilities. The 22 Major Arcana will complete the 78-song system in a future implementation.",
     href: "https://sonic-tarot.lovable.app",
     features: [
-      "Minimalist Piano Composition",
-      "Field Recording Integration",
-      "Granular Synthesis Textures",
-      "Emotional State Modeling"
+      "Four Elemental Albums (56 Tracks Total)",
+      "Minor Arcana Pip Card System",
+      "Improvisational Piano Etudes",
+      "Shuffled Spread Divination Method"
     ],
     images: [
       "https://images.unsplash.com/photo-1602346342595-6b3347c52c02?q=80&w=1080", // Piano
@@ -47,10 +47,10 @@ const frameworks: FrameworkData[] = [
     ]
   },
   {
-    title: "Brand Alchemy",
+    title: "Creative Alchemy",
     subtitle: "Strategic Ecosystems",
     description: "A professional methodology for building brand ecosystems that align message, medium, and human meaning.",
-    longDescription: "Brand Alchemy is the process of transmutation applied to business identity. It moves a brand from 'Base Matter' (unrefined product/service) through 'Purification' (market positioning and core values) to 'Illumination' (visual and verbal identity). The result is a cohesive system that breathes and adapts, rather than a static logo.",
+    longDescription: "Creative Alchemy is the process of transmutation applied to business identity. It moves a brand from 'Base Matter' (unrefined product/service) through 'Purification' (market positioning and core values) to 'Illumination' (visual and verbal identity). The result is a cohesive system that breathes and adapts, rather than a static logo.",
     href: "https://roaring-kleicha-d0d21b.netlify.app",
     features: [
       "Archetypal Brand Strategy",
@@ -59,7 +59,7 @@ const frameworks: FrameworkData[] = [
       "Cross-Platform Coherence"
     ],
     images: [
-      "https://images.unsplash.com/photo-1711779187539-ef05cbaf5ff6?q=80&w=1080", // Swiss Design
+      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Gallery%201.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9HYWxsZXJ5IDEuanBnIiwiaWF0IjoxNzcxNDEzMDE4LCJleHAiOjE3NzE0MTY2MTh9.WOx52_F17AzIXkPNGuFlnY9jxYgjbgbaHprWs0UE-2c", // Swiss Design
       "https://images.unsplash.com/photo-1558707538-c56435bdcdf3?q=80&w=1080", // Typography
       "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1080", // Minimal Desk
       "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1080", // Minimal Mac
@@ -99,7 +99,7 @@ const frameworks: FrameworkData[] = [
       "Sonification of Data"
     ],
     images: [
-      "https://images.unsplash.com/photo-1714779573250-36242918e044?q=80&w=1080", // Sound Waves
+      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/PortraiT%20&&&.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9Qb3J0cmFpVCAmJiYuanBnIiwiaWF0IjoxNzcxNDEzMDkzLCJleHAiOjE3NzE0MTY2OTN9.m7TmFzME5oO5vZ1tW4f-T-0GM9-RkFbJOHhHR7qd6fc", // Sound Waves
       "https://images.unsplash.com/photo-1741997852940-e2321fddabf2?q=80&w=1080", // Cymatics
       "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1080", // B&W Lines
       "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1080", // Music Festival/Abstract
