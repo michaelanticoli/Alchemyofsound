@@ -105,7 +105,7 @@ export default function Portfolio() {
       category: "Synesthesia Tool",
       description:
         "Web-based instrument for spectrum-to-frequency translation. Investigates the physics of light and sound as parallel expressions of harmonic law.",
-      href: "https://orange-chamois-768607.hostingersite.com",
+      href: "https://chromatuner.vercel.app",
     },
   ];
 
