@@ -84,7 +84,7 @@ export default function Portfolio() {
       category: "Precision Astronomy / Sound Design",
       description:
         "Swiss Ephemeris-grade astronomical engine transforming astrological blueprints into personalized harmonic frequencies, sacred scales, and immersive sound rituals with arc-minute precision.",
-      href: "https://sonic-dna.created.app/",
+      href: "https://natalharmonix.netlify.app",
     },
     {
       title: "Quantumelodic Oracle",
@@ -99,6 +99,13 @@ export default function Portfolio() {
       description:
         "Identity system that translates biometric and biological inputs into unique sonic signatures, exploring the mathematical relationship between organic data and sound.",
       href: "https://neon-paletas-601558.netlify.app",
+    },
+    {
+      title: "Harmonic Interactions",
+      category: "Sensory architecture / Audio",
+      description:
+        "Visual and audio interface with built in quizzes and progressive curriculum to acquaint and educate the student's ear on the shapes of sounds and the textures of harmonic relationships.",
+      href: "https://aesthetic-treacle-db1289.netlify.app/#/",
     },
     {
       title: "Chromatune",
@@ -131,7 +138,7 @@ export default function Portfolio() {
   ];
 
   return (
-    <div
+    <divº
       ref={containerRef}
       className="min-h-screen bg-black text-white"
     >
