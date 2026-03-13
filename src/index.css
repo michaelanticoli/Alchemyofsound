@@ -860,6 +860,10 @@
     height: calc(var(--spacing) * 32);
   }
 
+  .h-48 {
+    height: calc(var(--spacing) * 48);
+  }
+
   .h-64 {
     height: calc(var(--spacing) * 64);
   }
@@ -1111,6 +1115,14 @@
 
   .resize-none {
     resize: none;
+  }
+
+  .list-inside {
+    list-style-position: inside;
+  }
+
+  .list-disc {
+    list-style-type: disc;
   }
 
   .appearance-none {
@@ -2322,6 +2334,10 @@
     letter-spacing: var(--tracking-widest);
   }
 
+  .break-all {
+    word-break: break-all;
+  }
+
   .whitespace-nowrap {
     white-space: nowrap;
   }
@@ -2518,6 +2534,10 @@
     .text-red-400\/60 {
       color: color-mix(in oklab, var(--color-red-400) 60%, transparent);
     }
+  }
+
+  .text-red-500 {
+    color: var(--color-red-500);
   }
 
   .text-secondary-foreground {
@@ -3033,6 +3053,18 @@
   @media (hover: hover) {
     .hover\:bg-emerald-400:hover {
       background-color: var(--color-emerald-400);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-emerald-500\/30:hover {
+      background-color: color-mix(in srgb, oklch(.696 .17 162.48) 30%, transparent);
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-emerald-500\/30:hover {
+        background-color: color-mix(in oklab, var(--color-emerald-500) 30%, transparent);
+      }
     }
   }
 
