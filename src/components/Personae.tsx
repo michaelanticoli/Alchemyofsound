@@ -16,7 +16,7 @@ const brokebackImage1 =
 const brokebackImage2 =
   "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1080";
 const nadiaBiznessImage =
-  "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?q=80&w=1080";
+  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/nadia-business.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9uYWRpYS1idXNpbmVzcy5wbmciLCJpYXQiOjE3NzM0MzQzMzksImV4cCI6MTc3MzQzNzkzOX0.s4dfHeT6_sdLEcC38KwxXmj0ixF081mvhwoILNuubIY";
 const angBoccaImage =
   "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1080";
 import { motion } from "motion/react";
