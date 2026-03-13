@@ -1,24 +1,24 @@
 // Placeholder images - replace with actual uploaded images via admin panel
 const redCasketImage1 =
-  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Red%20casket%20club(4).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9SZWQgY2Fza2V0IGNsdWIoNCkucG5nIiwiaWF0IjoxNzcxNDEyNTc0LCJleHAiOjE3NzE0MTYxNzR9.mOHlkHi3Cv940ZWehJtyIyz0K2u3e5wzfFPDhbaZi_g";
+  "red casket club(4).png";
 const redCasketImage2 =
-  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Red%20casket%20club(6).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9SZWQgY2Fza2V0IGNsdWIoNikucG5nIiwiaWF0IjoxNzcxNDEyNjM4LCJleHAiOjE3NzE0MTYyMzh9.vhbbkcAbCWisZKv32W8MDF-dJJlbfq6kokMYq9LHZK0";
+  "red casket club.png";
 const redCasketImage3 =
-  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Red%20casket%20club.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9SZWQgY2Fza2V0IGNsdWIucG5nIiwiaWF0IjoxNzcxNDEyNjY3LCJleHAiOjE3NzE0MTYyNjd9.8Y-tWYAN2eLARXGDp9awpXaKcHo7Tkcpx3ZZ95b9_fA";
+  "red casket club(2).png";
 const silasGoghImage1 =
-  "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1080";
+  "silas gogh.png";
 const silasGoghImage2 =
-  "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1080";
+  "silas gogh(1).png";
 const silasGoghImage3 =
-  "https://images.unsplash.com/photo-1445985543470-41fba5c3144a?q=80&w=1080";
+  "silas gogh(3).png";
 const brokebackImage1 =
-  "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1080";
+  "brokeback.png";
 const brokebackImage2 =
-  "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1080";
+  "brokeback kerouac.png";
 const nadiaBiznessImage =
-  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/nadia-business.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9uYWRpYS1idXNpbmVzcy5wbmciLCJpYXQiOjE3NzM0MzQzMzksImV4cCI6MTc3MzQzNzkzOX0.s4dfHeT6_sdLEcC38KwxXmj0ixF081mvhwoILNuubIY";
+  "nadia business.png";
 const angBoccaImage =
-  "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1080";
+  "ang bocca artist.png";
 import { motion } from "motion/react";
 import {
   Mic2,
