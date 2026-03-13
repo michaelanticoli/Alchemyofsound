@@ -1,12 +1,12 @@
 // Placeholder images - replace with actual uploaded images via admin panel
 const redCasketImage1 =
-  "red casket club(4).png";
+  "red casket club-4.png";
 const redCasketImage2 =
-  "red casket club.png";
+  "red casket club-2.png";
 const redCasketImage3 =
-  "red casket club(2).png";
+  "red casket club-3.png";
 const silasGoghImage1 =
-  "silas gogh.png";
+  "silas-gogh.jpg";
 const silasGoghImage2 =
   "silas gogh(1).png";
 const silasGoghImage3 =
@@ -16,9 +16,9 @@ const brokebackImage1 =
 const brokebackImage2 =
   "brokeback kerouac.png";
 const nadiaBiznessImage =
-  "nadia business.png";
+  "nadia-business.png";
 const angBoccaImage =
-  "ang bocca artist.png";
+  "Ang-Bocca-artist.png";
 import { motion } from "motion/react";
 import {
   Mic2,
