@@ -91,7 +91,6 @@ export function SkillOrbit({ skills }: SkillOrbitProps) {
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.8, delay: 0.2 }}
         className="absolute w-4 h-4 rounded-full bg-gradient-to-br from-indigo-400 to-purple-500 z-10"
         animate={{
           boxShadow: [
@@ -100,7 +99,10 @@ export function SkillOrbit({ skills }: SkillOrbitProps) {
             "0 0 20px rgba(99, 102, 241, 0.5)",
           ],
         }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        transition={{
+          scale: { duration: 0.8, delay: 0.2 },
+          boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+        }}
       />
 
       {/* Orbits - slowly rotating */}
@@ -118,11 +120,6 @@ export function SkillOrbit({ skills }: SkillOrbitProps) {
           }}
           animate={{
             rotate: orbit % 2 === 0 ? 360 : -360,
-          }}
-          transition={{
-            duration: 60 + orbit * 20,
-            repeat: Infinity,
-            ease: "linear",
           }}
         />
       ))}
@@ -164,7 +161,6 @@ export function SkillOrbit({ skills }: SkillOrbitProps) {
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 + index * 0.08 }}
               whileHover={{ scale: 1.3, zIndex: 50 }}
               onHoverStart={() => setHoveredSkill(skill)}
               onHoverEnd={() => setHoveredSkill(null)}
@@ -182,6 +178,8 @@ export function SkillOrbit({ skills }: SkillOrbitProps) {
                 rotate: rotationDirection * -360,
               }}
               transition={{
+                opacity: { duration: 0.5, delay: 0.5 + index * 0.08 },
+                scale: { duration: 0.5, delay: 0.5 + index * 0.08 },
                 rotate: {
                   duration: rotationSpeed,
                   repeat: Infinity,
