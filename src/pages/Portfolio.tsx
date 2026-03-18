@@ -160,31 +160,23 @@ export default function Portfolio() {
             </span>
           </motion.div>
 
-          <div className="flex items-center gap-8">
-            <motion.a
-              href="#work"
-              whileHover={{ x: 5 }}
-              className="text-muted-foreground hover:text-white transition-colors tracking-wide"
-            >
-              Work
-            </motion.a>
-            <motion.a
-              href="#about"
-              whileHover={{ x: 5 }}
-              className="text-muted-foreground hover:text-white transition-colors tracking-wide"
-            >
-              About
-            </motion.a>
-            <motion.a
-              href="#contact"
-              whileHover={{ x: 5 }}
-              className="text-muted-foreground hover:text-white transition-colors tracking-wide"
-            >
-              Contact
-            </motion.a>
-          </div>
-        </div>
-      </motion.nav>
+          <nav className="flex items-center gap-6 text-sm uppercase tracking-[0.2em]">
+  <a href="https://michaelanticoli.com#work" className="hover:opacity-70 transition-opacity">
+    Work
+  </a>
+  <a href="https://marketing.michaelanticoli.com" className="hover:opacity-70 transition-opacity">
+    Marketing & Strategy
+  </a>
+  <a href="https://audio.michaelanticoli.com" className="hover:opacity-70 transition-opacity">
+    Audio
+  </a>
+  <a href="https://michaelanticoli.com#about" className="hover:opacity-70 transition-opacity">
+    About
+  </a>
+  <a href="mailto:michaelanticoli@gmail.com" className="hover:opacity-70 transition-opacity">
+    Contact
+  </a>
+</nav>
 
       {/* Hero Section */}
       <motion.section
