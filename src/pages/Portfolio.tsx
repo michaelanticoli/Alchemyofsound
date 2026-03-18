@@ -107,6 +107,13 @@ export default function Portfolio() {
         "Web-based instrument for spectrum-to-frequency translation. Investigates the physics of light and sound as parallel expressions of harmonic law.",
       href: "https://orange-chamois-768607.hostingersite.com",
     },
+    {
+      title: "Audio Lab",
+      category: "Plugin Evaluation / Technical Writing",
+      description:
+        "A structured protocol for evaluating audio plugins across signal behavior, perceptual impact, workflow integration, and communication value.",
+      href: "/audio-lab",
+    },
   ];
 
   const skills = [
