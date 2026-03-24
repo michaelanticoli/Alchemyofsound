@@ -4,6 +4,7 @@ import AudioAdmin from "./pages/AudioAdmin";
 import AudioDebugPage from "./pages/AudioDebugPage";
 import ImageMapper from "./pages/ImageMapper";
 import AudioLab from "./pages/AudioLab";
+import Strategy from "./pages/Strategy";
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
   {
     path: "/audio-lab",
     Component: AudioLab,
+  },
+  {
+    path: "/strategy",
+    Component: Strategy,
   },
   {
     path: "/admin/audio",
