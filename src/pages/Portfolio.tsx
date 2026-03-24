@@ -177,6 +177,8 @@ export default function Portfolio() {
     Contact
   </a>
 </nav>
+        </div>
+      </motion.nav>
 
       {/* Hero Section */}
       <motion.section
