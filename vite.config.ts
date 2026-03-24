@@ -53,6 +53,7 @@ import path from 'path';
     },
     build: {
       target: 'esnext',
+      outDir: 'dist',
       outDir: 'build',
       rollupOptions: {
         input: {
