@@ -1,7 +1,7 @@
 
-  import { defineConfig } from 'vite';
-  import react from '@vitejs/plugin-react-swc';
-  import path from 'path';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import path from 'path';
 
   export default defineConfig({
     plugins: [react()],
@@ -54,6 +54,13 @@
     build: {
       target: 'esnext',
       outDir: 'build',
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          audioLab: path.resolve(__dirname, 'audio-lab/index.html'),
+          strategy: path.resolve(__dirname, 'strategy/index.html'),
+        },
+      },
     },
     server: {
       port: 3000,
