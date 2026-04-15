@@ -1,6 +1,6 @@
 // Placeholder images - replace with actual uploaded images via admin panel
 const redCasketImage1 =
-  "red_casket_club.png;
+  "red_casket_club.png;"
 const redCasketImage2 =
   "red casket club-2.png";
 const redCasketImage3 =
