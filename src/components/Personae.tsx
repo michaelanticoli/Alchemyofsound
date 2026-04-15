@@ -12,7 +12,7 @@ const silasGoghImage2 =
 const silasGoghImage3 =
   "silas gogh(3).png";
 const brokebackImage1 =
-  "brokeback.png";
+  "BrokeBack_Kerouac_cover.png";
 const brokebackImage2 =
   "brokeback kerouac.png";
 const nadiaBiznessImage =
