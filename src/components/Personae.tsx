@@ -1,12 +1,12 @@
 // Placeholder images - replace with actual uploaded images via admin panel
 const redCasketImage1 =
-  "red casket club-4.png";
+  "red_casket_club.png;
 const redCasketImage2 =
   "red casket club-2.png";
 const redCasketImage3 =
   "red casket club-3.png";
 const silasGoghImage1 =
-  "silas-gogh.jpg";
+  "silas_gogh.jpg";
 const silasGoghImage2 =
   "silas gogh(1).png";
 const silasGoghImage3 =
@@ -18,7 +18,7 @@ const brokebackImage2 =
 const nadiaBiznessImage =
   "nadia-business.png";
 const angBoccaImage =
-  "Ang-Bocca-artist.png";
+  "Ang_Bocca_artist.png";
 import { motion } from "motion/react";
 import {
   Mic2,
