@@ -1,53 +1,73 @@
 import { motion } from "motion/react";
-import { Combine } from "lucide-react";
 
 export function Methodology() {
+  const capabilities = [
+    {
+      title: "Brand Strategy",
+      description:
+        "Positioning, messaging, audience insight, and campaign thinking for brands, founders, and emerging products.",
+    },
+    {
+      title: "Sonic Branding",
+      description:
+        "Using music, sound, and emotional recall to create stronger brand identity and memorability.",
+    },
+    {
+      title: "Music Platform Strategy",
+      description:
+        "Editorial thinking, audience behavior, artist storytelling, and music discovery systems.",
+    },
+    {
+      title: "Creative Direction",
+      description:
+        "Helping shape the look, feel, language, and emotional logic behind campaigns, experiences, and brands.",
+    },
+  ];
+
   return (
     <section className="py-24 px-6 lg:px-12 max-w-7xl mx-auto border-b border-white/5">
-      <div className="grid lg:grid-cols-2 gap-20 items-start">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="flex items-center gap-3 text-white/50 uppercase tracking-[0.25em] text-sm font-medium font-mono mb-8">
-            <Combine className="w-5 h-5" />
-            <span>Methodology</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-medium tracking-tight leading-[1.15] mb-8">
-            Brand Alchemy & <br />
-            <span className="text-white/60">Systems of Meaning</span>
-          </h2>
-          <div className="prose prose-invert prose-lg text-muted-foreground">
-            <p className="mb-6 text-base md:text-lg leading-relaxed">
-              Michael's foundation as a Creative Technologist places him at the crossroads of culture, clarity, and creativity. His approach is simple: brands are living systems—intentional, connective, and built to evolve.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed">
-              His methodology, <strong className="font-semibold">Creative Alchemy</strong>, acts as a structured framework for transformation. Inspired by classical alchemical processes—dissolution, purification, illumination, and manifestation—it guides concepts from ambiguity to resonance.
-            </p>
-          </div>
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 24 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="max-w-3xl mb-14"
+      >
+        <div className="text-white/50 uppercase tracking-[0.25em] text-sm font-medium font-mono mb-6">
+          Capabilities
+        </div>
+        <h2 className="text-4xl md:text-5xl font-medium tracking-tight leading-[1.1] mb-6">
+          Clear ways I can help.
+        </h2>
+        <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+          My work spans brand strategy, sonic identity, music platform thinking,
+          content systems, and creative direction. I build frameworks,
+          campaigns, and experiences that help people understand who they are,
+          what they offer, and why it matters.
+        </p>
+      </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative"
-        >
-          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-          <div className="absolute bottom-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-          
-          <div className="py-12 px-8 lg:px-16 text-center">
-            <blockquote className="text-2xl md:text-3xl font-serif italic text-white/90 leading-relaxed mb-8">
-              "Everything we build — whether sound, brand, or being — is a frequency. My work is about tuning that frequency to truth."
-            </blockquote>
-            <cite className="not-italic text-sm font-mono tracking-widest text-emerald-500 uppercase">
-              — Michael Anticoli
-            </cite>
-          </div>
-        </motion.div>
+      <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch">
+        {capabilities.map((capability, index) => (
+          <motion.article
+            key={capability.title}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: index * 0.08 }}
+            className="rounded-2xl border border-white/10 bg-white/[0.03] p-8"
+          >
+            <div className="text-[11px] uppercase tracking-[0.22em] text-white/40 mb-4">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+            <h3 className="text-2xl font-medium tracking-tight mb-4">
+              {capability.title}
+            </h3>
+            <p className="text-muted-foreground text-base leading-relaxed">
+              {capability.description}
+            </p>
+          </motion.article>
+        ))}
       </div>
     </section>
   );

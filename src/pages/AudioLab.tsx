@@ -60,7 +60,7 @@ const artifactRows = [
 
 const globalNavLinks = [
   { label: "Home", href: "/" },
-  { label: "Marketing & Strategy", href: "/strategy/" },
+  { label: "Strategy", href: "/strategy/" },
   { label: "Music Strategy", href: "/music-strategy/" },
   { label: "Audio", href: "/audio-lab/" },
   { label: "Contact", href: "mailto:michaelanticoli@gmail.com" },
@@ -318,7 +318,7 @@ export default function AudioLab() {
         links={[
           {
             eyebrow: "Strategy profile",
-            title: "Marketing & Strategy",
+            title: "Strategy",
             description:
               "Audience insight, cultural intelligence, and performance-minded brand strategy.",
             to: "/strategy/",

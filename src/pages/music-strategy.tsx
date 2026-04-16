@@ -16,7 +16,7 @@ import { Badge } from "../components/ui/badge";
 
 const globalNavLinks = [
   { label: "Home", href: "/" },
-  { label: "Marketing & Strategy", href: "/strategy/" },
+  { label: "Strategy", href: "/strategy/" },
   { label: "Music Strategy", href: "/music-strategy/" },
   { label: "Audio", href: "/audio-lab/" },
   { label: "Contact", href: "mailto:michaelanticoli@gmail.com" },
@@ -367,7 +367,7 @@ export default function MusicStrategy() {
         links={[
           {
             eyebrow: "Adjacent page",
-            title: "Marketing & Strategy",
+            title: "Strategy",
             description:
               "See the broader strategy profile across brand, audience, and performance work.",
             to: "/strategy/",
