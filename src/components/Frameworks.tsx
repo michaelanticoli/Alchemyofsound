@@ -3,6 +3,9 @@ import { Sparkles, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { FrameworkModal, FrameworkData } from "./FrameworkModal";
 
+const frameworkGallery = (folder: string, count: number) =>
+  Array.from({ length: count }, (_, index) => `/frameworks/${folder}/img-${index + 1}.svg`);
+
 const frameworks: FrameworkData[] = [
   {
     title: "Quantumelodies",
@@ -16,15 +19,7 @@ const frameworks: FrameworkData[] = [
       "Temporal Harmonic Mapping",
       "Archetypal Data Visualization"
     ],
-    images: [
-      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/**QUantumelodic%20MOckup***.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy8qKlFVYW50dW1lbG9kaWMgTU9ja3VwKioqLmpwZWciLCJpYXQiOjE3NzE0NjU5MDAsImV4cCI6MTc3MTQ2OTUwMH0.RwkzLmtCgMFADBTGC9OL-OscIhImfc2V_KkI94dRukY",
-      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/**QUantumelodic%20MOckup***.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy8qKlFVYW50dW1lbG9kaWMgTU9ja3VwKioqLmpwZWciLCJpYXQiOjE3NzE0MTI4MTcsImV4cCI6MTc3MTQxNjQxN30.5Sn7Rj1sKD88k3rOUYRHJp3bwplp0vq8eD16u9r0iPM",
-      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Whisk_089d5063671bc4ab6164241402e2de82dr.jpeg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9XaGlza18wODlkNTA2MzY3MWJjNGFiNjE2NDI0MTQwMmUyZGU4MmRyLmpwZWciLCJpYXQiOjE3NzE0MTI4ODMsImV4cCI6MTc3MTQxNjQ4M30.JkWLSR8Jm1_oqx_PSzujHq-L-v89FnlXpVmSUkjmIm4", // Sacred Geo
-      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Quantum%20Vibrations_%20Harmonizing%20Astrology,%20Music,%20and%20the%20Resonant%20Mind-3.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9RdWFudHVtIFZpYnJhdGlvbnNfIEhhcm1vbml6aW5nIEFzdHJvbG9neSwgTXVzaWMsIGFuZCB0aGUgUmVzb25hbnQgTWluZC0zLmpwZyIsImlhdCI6MTc3MTQxMjkzNCwiZXhwIjoxNzcxNDE2NTM0fQ.vHKpwl2dY3aj32LYufoFtADxYki7bXU0V0G2EaFkt0g", // Celestial Map
-      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/EXPLAIN%20TO%20ME.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9FWFBMQUlOIFRPIE1FLnBuZyIsImlhdCI6MTc3MTQxMjk2OSwiZXhwIjoxNzcxNDE2NTY5fQ.uK8p37fOgckr3TTfNiCJn-TsO-KDXuie1MO58t4Xxmk", // Star Field
-      "https://images.unsplash.com/photo-1465101162946-4377e57745c3?q=80&w=1080", // Galaxy
-      "https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?q=80&w=1080"  // Rain/Stars
-    ]
+    images: frameworkGallery("quantumelodies", 7)
   },
   {
     title: "The On Being Series",
@@ -38,13 +33,7 @@ const frameworks: FrameworkData[] = [
       "Improvisational Piano Etudes",
       "Shuffled Spread Divination Method"
     ],
-    images: [
-      "https://images.unsplash.com/photo-1602346342595-6b3347c52c02?q=80&w=1080", // Piano
-      "https://images.unsplash.com/photo-1762185224934-c0e82280a07d?q=80&w=1080", // B&W Texture
-      "https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?q=80&w=1080", // Piano Keys
-      "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=1080", // Sheet Music
-      "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=1080"  // Moody
-    ]
+    images: frameworkGallery("on-being-series", 5)
   },
   {
     title: "Creative Alchemy",
@@ -58,13 +47,7 @@ const frameworks: FrameworkData[] = [
       "Narrative Architecture",
       "Cross-Platform Coherence"
     ],
-    images: [
-      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Gallery%201.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9HYWxsZXJ5IDEuanBnIiwiaWF0IjoxNzcxNDEzMDE4LCJleHAiOjE3NzE0MTY2MTh9.WOx52_F17AzIXkPNGuFlnY9jxYgjbgbaHprWs0UE-2c", // Swiss Design
-      "https://images.unsplash.com/photo-1558707538-c56435bdcdf3?q=80&w=1080", // Typography
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1080", // Minimal Desk
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1080", // Minimal Mac
-      "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=1080"  // Notebook
-    ]
+    images: frameworkGallery("creative-alchemy", 5)
   },
   {
     title: "Moontuner",
@@ -78,13 +61,7 @@ const frameworks: FrameworkData[] = [
       "Workflow Optimization",
       "Natural Timekeeping"
     ],
-    images: [
-      "https://images.unsplash.com/photo-1610294517329-d4aac71cd302?q=80&w=1080", // Moon Phases
-      "https://images.unsplash.com/photo-1626230352254-d25d6c0b6809?q=80&w=1080", // Surface
-      "https://images.unsplash.com/photo-1532968961962-8a0cb3a2d4f5?q=80&w=1080", // Moon Full
-      "https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?q=80&w=1080", // Dark Sky
-      "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1080"  // Dark Clouds
-    ]
+    images: frameworkGallery("moontuner", 5)
   },
   {
     title: "Astroharmonic Research",
@@ -98,13 +75,7 @@ const frameworks: FrameworkData[] = [
       "Acoustic Physics",
       "Sonification of Data"
     ],
-    images: [
-      "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/PortraiT%20&&&.jpg?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9Qb3J0cmFpVCAmJiYuanBnIiwiaWF0IjoxNzcxNDEzMDkzLCJleHAiOjE3NzE0MTY2OTN9.m7TmFzME5oO5vZ1tW4f-T-0GM9-RkFbJOHhHR7qd6fc", // Sound Waves
-      "https://images.unsplash.com/photo-1741997852940-e2321fddabf2?q=80&w=1080", // Cymatics
-      "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=1080", // B&W Lines
-      "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1080", // Music Festival/Abstract
-      "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=1080"  // Dark Fluid
-    ]
+    images: frameworkGallery("astroharmonic-research", 5)
   },
   {
     title: "Lyrix Prism",
@@ -118,13 +89,7 @@ const frameworks: FrameworkData[] = [
       "Synesthetic Algorithms",
       "Generative Art Output"
     ],
-    images: [
-      "figma:asset/c32e372a54ff0649e322c44da56c9a21b91b2754.png",
-      "figma:asset/4f54459ab6c250dec6acb9fc3386f89c4b00dadc.png",
-      "figma:asset/9b37edc72d6860e4feac18771acf13ba65f3a9e6.png",
-      "figma:asset/c32e372a54ff0649e322c44da56c9a21b91b2754.png",
-      "figma:asset/9b37edc72d6860e4feac18771acf13ba65f3a9e6.png"
-    ]
+    images: frameworkGallery("lyrix-prism", 5)
   }
 ];
 
