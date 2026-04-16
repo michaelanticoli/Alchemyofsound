@@ -1,74 +1,140 @@
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import { ArrowLeft, AudioLines } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowUpRight,
+  AudioLines,
+  Briefcase,
+  Sparkles,
+  Waves,
+} from "lucide-react";
 
-const framework = [
+const services = [
   {
-    number: "01",
-    title: "Signal Integrity",
+    icon: AudioLines,
+    title: "Sonic Branding",
+    description:
+      "Helping brands develop distinct sonic identities that increase recognition, emotional connection, and memorability.",
+  },
+  {
+    icon: Waves,
+    title: "Music Strategy",
+    description:
+      "Helping platforms, artists, and campaigns use music with greater intention across content, audience engagement, and brand storytelling.",
+  },
+  {
+    icon: Sparkles,
+    title: "Artist Development",
+    description:
+      "Supporting artists with narrative positioning, sonic direction, world-building, and long-term identity development.",
+  },
+  {
+    icon: Briefcase,
+    title: "Audio Direction",
+    description:
+      "Creative oversight for music selection, sound design, voice, mood, tone, and emotional pacing.",
+  },
+];
+
+const areasOfWork = [
+  {
+    title: "Brand Sound Systems",
+    description:
+      "Identity structures that make brands feel coherent, recognizable, and emotionally legible.",
     items: [
-      "Phase response and stereo image stability",
-      "Gain staging predictability",
-      "Oversampling impact and noise floor behavior",
-      "Gain-matched A/B comparisons",
+      "Sonic logos",
+      "Brand playlists",
+      "Campaign sound direction",
+      "Audio identity frameworks",
     ],
   },
   {
-    number: "02",
-    title: "Harmonic Behavior",
+    title: "Artist & Music Projects",
+    description:
+      "Creative development work that sharpens both the sound and the story around it.",
     items: [
-      "Odd versus even harmonic emphasis",
-      "Tonal density at low, moderate, and heavy drive",
-      "How harmonic growth tracks input level",
-      "Whether musicality collapses under stress",
+      "Songwriting",
+      "Production",
+      "Piano and composition",
+      "Artist identity and narrative development",
     ],
   },
   {
-    number: "03",
-    title: "Transient Response",
+    title: "Platform & Content Strategy",
+    description:
+      "Strategic audio thinking for audience behavior, discovery, and content ecosystems.",
     items: [
-      "Attack transparency",
-      "Transient rounding versus destruction",
-      "Punch retention on drums and percussive material",
-      "Microdynamic behavior under repeated hits",
+      "Music discovery concepts",
+      "Playlist and editorial thinking",
+      "Audience behavior",
+      "Content ecosystems",
     ],
   },
   {
-    number: "04",
-    title: "Workflow and UX",
+    title: "Experimental Concepts",
+    description:
+      "Original systems translated into commercially relevant language and clearer strategic use cases.",
     items: [
-      "Parameter clarity and control hierarchy",
-      "Preset usefulness",
-      "CPU efficiency in real sessions",
-      "Visual feedback and modulation usability",
+      "Sonic identity systems translating personal or brand characteristics into sound",
+      "Music, identity, and audience frameworks exploring emotional response",
+      "Experimental music-personalization concepts built around cyclical and symbolic inputs",
+      "Interactive sound experiences and lyric analysis tools",
     ],
   },
 ];
 
-const artifactRows = [
-  ["Plugin Category", "Analog-modeled saturation"],
-  ["Primary Source", "Stereo drum loop"],
-  ["Secondary Source", "Mono vocal phrase"],
-  ["Test Focus", "Transient preservation vs harmonic density"],
-  ["Method", "Gain-matched low / medium / high drive passes"],
-  [
-    "Conclusion",
-    "Most effective on buses where cohesion is desirable; less effective where sharp transient articulation must remain dominant",
-  ],
+const credibility = [
+  {
+    title: "Agency-side strategic grounding",
+    description:
+      "Experience across brand strategy, campaign thinking, and audience insight keeps the work commercially aware, not purely aesthetic.",
+  },
+  {
+    title: "Deep music practice",
+    description:
+      "Years of songwriting, production, piano, and sound design inform decisions about tone, structure, pacing, and emotional memory.",
+  },
+  {
+    title: "Independent concept building",
+    description:
+      "Original products and frameworks developed end-to-end, from idea and positioning to interface, language, and user experience.",
+  },
+  {
+    title: "Business and culture fluency",
+    description:
+      "An ability to connect creative direction with positioning, audience response, and the larger system a brand or artist lives inside.",
+  },
 ];
+
+const closingPoints = [
+  "It creates recognition.",
+  "It shapes perception.",
+  "It builds trust.",
+  "It gives people something to remember.",
+];
+
+const sectionLabel =
+  "text-xs font-medium uppercase tracking-[0.22em] text-white/45";
 
 export default function AudioLab() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <div className="fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.09),transparent_36%),linear-gradient(180deg,#050505_0%,#090909_45%,#030303_100%)]" />
+        <div className="absolute inset-x-0 top-0 h-[28rem] bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30 [mask-image:linear-gradient(180deg,black,transparent)]" />
+        <div className="absolute left-[-8rem] top-24 h-72 w-72 rounded-full bg-white/8 blur-3xl" />
+        <div className="absolute bottom-20 right-[-10rem] h-80 w-80 rounded-full bg-stone-400/10 blur-3xl" />
+      </div>
+
       <motion.header
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl"
+        className="sticky top-0 z-50 border-b border-white/10 bg-black/55 backdrop-blur-xl"
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
           <div className="flex flex-col">
-            <span className="tracking-[0.2em] uppercase text-sm">
+            <span className="text-sm uppercase tracking-[0.22em]">
               Michael Anticoli
             </span>
             <span className="text-xs uppercase tracking-[0.18em] text-white/40">
@@ -76,253 +142,347 @@ export default function AudioLab() {
             </span>
           </div>
 
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back</span>
-          </Link>
+          <div className="flex items-center gap-5 text-sm uppercase tracking-[0.16em] text-white/60">
+            <a href="#selected-work" className="hidden md:block hover:text-white">
+              Work
+            </a>
+            <a href="#proof" className="hidden md:block hover:text-white">
+              Background
+            </a>
+            <a href="#contact" className="hidden md:block hover:text-white">
+              Contact
+            </a>
+            <Link
+              to="/"
+              className="inline-flex items-center gap-2 text-white/75 transition-colors hover:text-white"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span>Back</span>
+            </Link>
+          </div>
         </div>
       </motion.header>
 
-      <main className="px-6 lg:px-12 py-16">
-        <div className="max-w-7xl mx-auto space-y-6">
+      <main className="px-6 pb-20 pt-10 lg:px-12 lg:pt-16">
+        <div className="mx-auto max-w-7xl">
           <motion.section
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            className="rounded-2xl border border-white/10 bg-white/[0.03] p-8 md:p-10"
+            transition={{ duration: 0.8 }}
+            className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] px-8 py-16 md:px-12 md:py-20 lg:px-16"
           >
-            <div className="inline-flex items-center gap-2 mb-6 text-xs uppercase tracking-[0.22em] text-white/45">
-              <AudioLines className="w-4 h-4" />
-              <span>Audio Lab</span>
+            <div className="absolute inset-y-0 right-0 hidden w-[34rem] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.12),transparent_58%)] lg:block" />
+
+            <div className="relative z-10 max-w-5xl">
+              <div className="mb-8 inline-flex items-center gap-3 text-xs font-medium uppercase tracking-[0.24em] text-white/52">
+                <AudioLines className="h-4 w-4" />
+                <span>Audio Strategy · Sonic Branding · Music Direction</span>
+              </div>
+
+              <h1 className="max-w-5xl text-5xl font-medium tracking-tight leading-[0.96] md:text-7xl lg:text-[5.5rem]">
+                Sound is not decoration.
+                <br />
+                It is identity, memory, emotion, and recall.
+              </h1>
+
+              <div className="mt-8 max-w-3xl space-y-5 text-lg leading-relaxed text-white/68 md:text-xl">
+                <p>
+                  I help brands, artists, and platforms use sound more
+                  intentionally.
+                </p>
+                <p>
+                  My work spans sonic branding, music strategy, artist
+                  storytelling, audio direction, and cultural positioning.
+                </p>
+                <p>
+                  Whether the goal is a brand identity, a campaign, an artist
+                  world, or a more emotionally intelligent customer experience,
+                  I approach sound as a strategic layer rather than an
+                  afterthought.
+                </p>
+              </div>
+
+              <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:flex-wrap">
+                <a
+                  href="#selected-work"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-medium uppercase tracking-[0.16em] text-black transition-transform hover:-translate-y-0.5"
+                >
+                  View Work
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="mailto:michaelanticoli@gmail.com?subject=Audio%20Strategy%20Project"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-4 text-sm font-medium uppercase tracking-[0.16em] text-white transition-colors hover:bg-white/10"
+                >
+                  Discuss a Project
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="https://audio.michaelanticoli.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-4 text-sm font-medium uppercase tracking-[0.16em] text-white/82 transition-colors hover:bg-white/10 hover:text-white"
+                >
+                  Listen to Selected Audio
+                  <ArrowUpRight className="h-4 w-4" />
+                </a>
+              </div>
             </div>
-
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium tracking-tight leading-[0.95] mb-6 max-w-4xl">
-              Plugin Evaluation Protocol
-            </h1>
-
-            <p className="text-base md:text-xl text-white/60 max-w-3xl leading-relaxed">
-              A structured framework for evaluating audio plugins across signal
-              behavior, perceptual impact, workflow integration, and clear
-              communication.
-            </p>
           </motion.section>
 
-          <section className="grid lg:grid-cols-[240px_1fr] gap-6">
-            <div className="text-xs uppercase tracking-[0.2em] text-white/45 font-medium">
-              Philosophy
+          <section id="what-i-do" className="grid gap-8 px-1 py-24 lg:grid-cols-[240px_1fr]">
+            <div>
+              <p className={sectionLabel}>What I Do</p>
+              <h2 className="mt-4 text-3xl font-medium tracking-tight text-white md:text-4xl">
+                Sonic Strategy & Creative Direction
+              </h2>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
-              <h2 className="text-2xl md:text-3xl tracking-tight mb-4">
-                Audio plugins are signal-shaping instruments.
-              </h2>
+            <div className="grid gap-5 md:grid-cols-2">
+              {services.map((service, index) => {
+                const Icon = service.icon;
 
-              <p className="text-white/65 text-base md:text-lg leading-relaxed mb-6 max-w-4xl">
-                Modern plugins do more than add effect. They reshape tone,
-                transient perception, stereo movement, density, and workflow. A
-                rigorous evaluation therefore looks at both technical behavior
-                and musical consequence.
-              </p>
-
-              <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-3">
-                {[
-                  "Signal Behavior",
-                  "Perceptual Impact",
-                  "Workflow Integration",
-                  "Communication Value",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-4 text-sm font-medium text-center text-white/88"
+                return (
+                  <motion.article
+                    key={service.title}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.55, delay: index * 0.08 }}
+                    className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 md:p-8"
                   >
-                    {item}
+                    <div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/[0.04] p-3 text-white/80">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-2xl font-medium tracking-tight">
+                      {service.title}
+                    </h3>
+                    <p className="mt-4 text-base leading-relaxed text-white/65">
+                      {service.description}
+                    </p>
+                  </motion.article>
+                );
+              })}
+            </div>
+          </section>
+
+          <section
+            id="philosophy"
+            className="grid gap-8 border-t border-white/10 px-1 py-24 lg:grid-cols-[240px_1fr]"
+          >
+            <div>
+              <p className={sectionLabel}>Approach</p>
+            </div>
+
+            <div className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.65 }}
+                className="rounded-[1.9rem] border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))] p-8 md:p-12"
+              >
+                <p className="text-xs uppercase tracking-[0.22em] text-white/45">
+                  A more thoughtful approach to sound.
+                </p>
+                <blockquote className="mt-6 max-w-4xl text-3xl font-medium tracking-tight leading-tight text-white md:text-5xl">
+                  “Sound often carries the emotional memory of an experience.”
+                </blockquote>
+                <div className="mt-8 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+                  <div className="space-y-5 text-lg leading-relaxed text-white/66">
+                    <p>
+                      Many teams treat sound as the last layer added at the end
+                      of a project.
+                    </p>
+                    <p>I think the opposite is true.</p>
+                    <p>
+                      Sound shapes how something feels, how long it lingers, and
+                      whether people remember it at all.
+                    </p>
+                    <p>
+                      That is why I approach music and audio not just as creative
+                      outputs, but as systems of meaning, mood, identity, and
+                      recall.
+                    </p>
                   </div>
+
+                  <div className="rounded-[1.6rem] border border-white/10 bg-black/30 p-6">
+                    <div className="mb-5 flex items-center gap-3 text-sm uppercase tracking-[0.18em] text-white/40">
+                      <AudioLines className="h-4 w-4" />
+                      <span>Strategic lens</span>
+                    </div>
+                    <ul className="space-y-4 text-sm uppercase tracking-[0.16em] text-white/70">
+                      <li>Identity before ornament</li>
+                      <li>Emotion before decoration</li>
+                      <li>Recall before novelty</li>
+                      <li>Meaning before noise</li>
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          <section
+            id="selected-work"
+            className="grid gap-8 border-t border-white/10 px-1 py-24 lg:grid-cols-[240px_1fr]"
+          >
+            <div>
+              <p className={sectionLabel}>Selected Areas of Work</p>
+              <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/50">
+                Audio Lab remains part of the URL, but the framing here stays
+                focused on strategic value.
+              </p>
+            </div>
+
+            <div className="grid gap-5 xl:grid-cols-2">
+              {areasOfWork.map((area, index) => (
+                <motion.article
+                  key={area.title}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.25 }}
+                  transition={{ duration: 0.55, delay: index * 0.08 }}
+                  className="rounded-[1.8rem] border border-white/10 bg-white/[0.03] p-7 md:p-8"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.22em] text-white/40">
+                        {index === 3 ? "Lab Concepts" : "Selected Work"}
+                      </p>
+                      <h3 className="mt-3 text-2xl font-medium tracking-tight">
+                        {area.title}
+                      </h3>
+                    </div>
+                    <Waves className="mt-1 h-5 w-5 text-white/28" />
+                  </div>
+
+                  <p className="mt-4 max-w-xl text-base leading-relaxed text-white/62">
+                    {area.description}
+                  </p>
+
+                  <ul className="mt-6 space-y-3 border-t border-white/10 pt-6 text-white/76">
+                    {area.items.map((item) => (
+                      <li key={item} className="flex gap-3 leading-relaxed">
+                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-white/45" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.article>
+              ))}
+            </div>
+          </section>
+
+          <section
+            id="proof"
+            className="grid gap-8 border-t border-white/10 px-1 py-24 lg:grid-cols-[240px_1fr]"
+          >
+            <div>
+              <p className={sectionLabel}>Proof / Credibility</p>
+              <h2 className="mt-4 text-3xl font-medium tracking-tight md:text-4xl">
+                A background that bridges strategy and sound.
+              </h2>
+            </div>
+
+            <div className="space-y-5">
+              <div className="grid gap-5 md:grid-cols-2">
+                {credibility.map((item, index) => (
+                  <motion.article
+                    key={item.title}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.25 }}
+                    transition={{ duration: 0.55, delay: index * 0.08 }}
+                    className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-7 md:p-8"
+                  >
+                    <div className="mb-5 inline-flex rounded-full border border-white/10 bg-white/[0.04] p-3 text-white/78">
+                      <Briefcase className="h-5 w-5" />
+                    </div>
+                    <h3 className="text-2xl font-medium tracking-tight">
+                      {item.title}
+                    </h3>
+                    <p className="mt-4 text-base leading-relaxed text-white/65">
+                      {item.description}
+                    </p>
+                  </motion.article>
                 ))}
               </div>
-            </div>
-          </section>
 
-          <section className="grid lg:grid-cols-[240px_1fr] gap-6">
-            <div className="text-xs uppercase tracking-[0.2em] text-white/45 font-medium">
-              Testing Environment
-            </div>
-
-            <div className="grid gap-4">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
-                <ul className="space-y-3 text-white/70 text-base leading-relaxed">
-                  <li>
-                    <strong className="text-white font-medium">DAW:</strong>{" "}
-                    Logic Pro
-                  </li>
-                  <li>
-                    <strong className="text-white font-medium">Platforms:</strong>{" "}
-                    macOS and Windows
-                  </li>
-                  <li>
-                    <strong className="text-white font-medium">Monitoring:</strong>{" "}
-                    Studio monitors and headphones
-                  </li>
-                  <li>
-                    <strong className="text-white font-medium">
-                      Reference Material:
-                    </strong>{" "}
-                    Drum loops, vocals, sustained pads, bass tones,
-                    transient-heavy percussion
-                  </li>
-                </ul>
+              <div className="rounded-[1.85rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] p-8 md:p-10">
+                <p className="text-xs uppercase tracking-[0.22em] text-white/40">
+                  Why it matters
+                </p>
+                <p className="mt-4 max-w-4xl text-2xl font-medium leading-relaxed tracking-tight text-white md:text-3xl">
+                  The value is not simply making things sound better. It is
+                  helping brands, artists, and platforms sound more intentional,
+                  more coherent, and more memorable.
+                </p>
               </div>
             </div>
           </section>
 
-          <section className="grid lg:grid-cols-[240px_1fr] gap-6">
-            <div className="text-xs uppercase tracking-[0.2em] text-white/45 font-medium">
-              Framework
-            </div>
+          <section
+            id="contact"
+            className="border-t border-white/10 px-1 pb-6 pt-24"
+          >
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.65 }}
+              className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 md:p-12 lg:p-16"
+            >
+              <p className="text-xs uppercase tracking-[0.22em] text-white/40">
+                Closing
+              </p>
+              <h2 className="mt-5 max-w-4xl text-4xl font-medium tracking-tight leading-tight md:text-6xl">
+                The right sound does more than fill space.
+              </h2>
 
-            <div className="grid md:grid-cols-2 gap-4">
-              {framework.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-7"
-                >
-                  <div className="text-xs uppercase tracking-[0.2em] text-white/45 mb-3">
-                    {item.number}
-                  </div>
-
-                  <h3 className="text-xl md:text-2xl tracking-tight mb-4">
-                    {item.title}
-                  </h3>
-
-                  <ul className="space-y-3 text-white/68 text-base leading-relaxed list-disc pl-5">
-                    {item.items.map((point) => (
-                      <li key={point}>{point}</li>
+              <div className="mt-8 grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+                <div>
+                  <div className="space-y-3 text-lg leading-relaxed text-white/68">
+                    {closingPoints.map((point) => (
+                      <p key={point}>{point}</p>
                     ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="grid lg:grid-cols-[240px_1fr] gap-6">
-            <div className="text-xs uppercase tracking-[0.2em] text-white/45 font-medium">
-              Example
-            </div>
-
-            <div className="grid gap-4">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
-                <h3 className="text-2xl md:text-3xl tracking-tight mb-5">
-                  Saturation Plugin Test
-                </h3>
-
-                <div className="space-y-5">
-                  <div>
-                    <div className="text-[11px] uppercase tracking-[0.18em] text-white/35 mb-2">
-                      Signal Chain
-                    </div>
-                    <div className="font-mono text-sm md:text-base text-white/80 rounded-xl border border-white/10 bg-black/30 px-4 py-3">
-                      Drum loop → saturation plugin → gain match → bypass
-                      comparison
-                    </div>
-                  </div>
-
-                  <div>
-                    <div className="text-[11px] uppercase tracking-[0.18em] text-white/35 mb-2">
-                      Observation
-                    </div>
-                    <p className="text-white/65 text-base md:text-lg leading-relaxed">
-                      Low drive levels introduce subtle harmonic enrichment in
-                      the midrange. At higher drive values, transient rounding
-                      increases and the signal begins to trade punch for
-                      cohesion.
-                    </p>
-                  </div>
-
-                  <div>
-                    <div className="text-[11px] uppercase tracking-[0.18em] text-white/35 mb-2">
-                      Musical Implication
-                    </div>
-                    <p className="text-white/65 text-base md:text-lg leading-relaxed">
-                      Most effective on buses where adhesive density is desired.
-                      Less suitable when aggressive transient preservation is the
-                      priority.
+                    <p className="pt-4 text-white/88">
+                      That is the work I am interested in.
                     </p>
                   </div>
                 </div>
-              </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8">
-                <h3 className="text-2xl tracking-tight mb-4">Test Artifact</h3>
+                <div className="rounded-[1.6rem] border border-white/10 bg-black/30 p-6 md:p-8">
+                  <p className="text-sm uppercase tracking-[0.2em] text-white/42">
+                    Soft inquiry
+                  </p>
+                  <p className="mt-4 max-w-lg text-base leading-relaxed text-white/64">
+                    If you are building a brand system, refining an artist
+                    identity, shaping a campaign, or rethinking how sound works
+                    inside an experience, I am open to the conversation.
+                  </p>
 
-                <div className="overflow-hidden rounded-2xl border border-white/10">
-                  {artifactRows.map(([label, value], index) => (
-                    <div
-                      key={label}
-                      className={`grid md:grid-cols-[220px_1fr] ${index !== artifactRows.length - 1
-                        ? "border-b border-white/10"
-                        : ""
-                        }`}
+                  <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                    <a
+                      href="mailto:michaelanticoli@gmail.com?subject=Audio%20Strategy%20Inquiry"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-medium uppercase tracking-[0.16em] text-black transition-transform hover:-translate-y-0.5"
                     >
-                      <div className="bg-white/[0.03] px-4 py-4 text-[11px] uppercase tracking-[0.18em] text-white/40">
-                        {label}
-                      </div>
-                      <div className="px-4 py-4 text-white/78 text-sm md:text-base leading-relaxed">
-                        {value}
-                      </div>
-                    </div>
-                  ))}
+                      Discuss a Project
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/michael-anticoli"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-4 text-sm font-medium uppercase tracking-[0.16em] text-white transition-colors hover:bg-white/10"
+                    >
+                      LinkedIn
+                      <ArrowUpRight className="h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <section className="grid lg:grid-cols-[240px_1fr] gap-6 pb-10">
-            <div className="text-xs uppercase tracking-[0.2em] text-white/45 font-medium">
-              Deliverables
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-4">
-              {[
-                {
-                  title: "Build Testing",
-                  items: [
-                    "Bug identification and reproduction notes",
-                    "Cross-platform compatibility checks",
-                    "Usability observations from real sessions",
-                  ],
-                },
-                {
-                  title: "Documentation",
-                  items: [
-                    "Clear feature explanations",
-                    "Quick-start guides",
-                    "Technical reference notes for users",
-                  ],
-                },
-                {
-                  title: "User Education",
-                  items: [
-                    "Workflow tutorials",
-                    "Creative use-case breakdowns",
-                    "Sound-design examples rooted in practice",
-                  ],
-                },
-              ].map((block) => (
-                <div
-                  key={block.title}
-                  className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-7"
-                >
-                  <h4 className="text-xl tracking-tight mb-4">{block.title}</h4>
-                  <ul className="space-y-3 text-white/68 text-base leading-relaxed list-disc pl-5">
-                    {block.items.map((point) => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+            </motion.div>
           </section>
         </div>
       </main>
