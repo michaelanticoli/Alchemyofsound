@@ -8,6 +8,8 @@ import {
   Waves,
 } from "lucide-react";
 import { LunarPhase } from "../components/LunarPhase";
+import { RelatedPages } from "../components/RelatedPages";
+import { SiteNav } from "../components/SiteNav";
 
 const pillars = [
   {
@@ -64,44 +66,17 @@ const experience = [
 ];
 
 const globalNavLinks = [
-  { label: "Home", href: "https://michaelanticoli.com" },
-  { label: "Marketing & Strategy", href: "https://marketing.michaelanticoli.com" },
-  { label: "Audio", href: "https://audio.michaelanticoli.com" },
-  { label: "About", href: "https://michaelanticoli.com/about" },
-  { label: "Contact", href: "https://michaelanticoli.com/contact" },
+  { label: "Home", href: "/" },
+  { label: "Marketing & Strategy", href: "/strategy/" },
+  { label: "Music Strategy", href: "/music-strategy/" },
+  { label: "Audio", href: "/audio-lab/" },
+  { label: "Contact", href: "mailto:michaelanticoli@gmail.com" },
 ];
 
 export default function Strategy() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <motion.nav
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.65, ease: "easeOut" }}
-        className="fixed top-0 left-0 right-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl"
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
-          <a
-            href="https://michaelanticoli.com"
-            className="flex items-center gap-3 tracking-widest uppercase"
-          >
-            <LunarPhase />
-            <span>MICHAEL ANTICOLI</span>
-          </a>
-
-          <div className="hidden md:flex items-center gap-8 text-sm tracking-wide">
-            {globalNavLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        </div>
-      </motion.nav>
+      <SiteNav links={globalNavLinks} theme="light" />
 
       <section className="min-h-screen relative overflow-hidden flex items-center px-6 lg:px-12 pt-24">
         <div className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000_60%,transparent_100%)]" />
@@ -284,6 +259,28 @@ export default function Strategy() {
           <ArrowUpRight className="w-4 h-4" />
         </motion.a>
       </section>
+
+      <RelatedPages
+        theme="light"
+        title="See the adjacent parts of the practice."
+        body="This strategy profile now sits inside a connected set of pages covering brand strategy, music strategy, and audio systems work."
+        links={[
+          {
+            eyebrow: "New page",
+            title: "Music Strategy",
+            description:
+              "Explore the audience, editorial, and sonic storytelling side of the work in a dedicated music strategy profile.",
+            to: "/music-strategy/",
+          },
+          {
+            eyebrow: "Audio detail",
+            title: "Audio Lab",
+            description:
+              "See the evaluation framework and technical writing approach behind the audio practice.",
+            to: "/audio-lab/",
+          },
+        ]}
+      />
 
       <footer className="border-t border-border py-10 px-6 lg:px-12">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-muted-foreground">

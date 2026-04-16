@@ -5,6 +5,7 @@ import AudioDebugPage from "./pages/AudioDebugPage";
 import ImageMapper from "./pages/ImageMapper";
 import AudioLab from "./pages/AudioLab";
 import Strategy from "./pages/Strategy";
+import MusicStrategy from "./pages/music-strategy";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
   {
     path: "/strategy",
     Component: Strategy,
+  },
+  {
+    path: "/music-strategy",
+    Component: MusicStrategy,
   },
   {
     path: "/admin/audio",

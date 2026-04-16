@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
-import { Link } from "react-router";
-import { ArrowLeft, AudioLines } from "lucide-react";
+import { AudioLines } from "lucide-react";
+import { RelatedPages } from "../components/RelatedPages";
+import { SiteNav } from "../components/SiteNav";
 
 const framework = [
   {
@@ -57,36 +58,20 @@ const artifactRows = [
   ],
 ];
 
+const globalNavLinks = [
+  { label: "Home", href: "/" },
+  { label: "Marketing & Strategy", href: "/strategy/" },
+  { label: "Music Strategy", href: "/music-strategy/" },
+  { label: "Audio", href: "/audio-lab/" },
+  { label: "Contact", href: "mailto:michaelanticoli@gmail.com" },
+];
+
 export default function AudioLab() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <motion.header
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="sticky top-0 z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl"
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-5 flex items-center justify-between">
-          <div className="flex flex-col">
-            <span className="tracking-[0.2em] uppercase text-sm">
-              Michael Anticoli
-            </span>
-            <span className="text-xs uppercase tracking-[0.18em] text-white/40">
-              Sound, Story, Strategy
-            </span>
-          </div>
+      <SiteNav links={globalNavLinks} theme="dark" />
 
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-white/70 hover:text-white transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Back</span>
-          </Link>
-        </div>
-      </motion.header>
-
-      <main className="px-6 lg:px-12 py-16">
+      <main className="px-6 lg:px-12 pt-32 pb-16">
         <div className="max-w-7xl mx-auto space-y-6">
           <motion.section
             initial={{ opacity: 0, y: 28 }}
@@ -326,6 +311,27 @@ export default function AudioLab() {
           </section>
         </div>
       </main>
+
+      <RelatedPages
+        title="Move between strategy, music, and audio without leaving the flow."
+        body="The site now treats these pages as connected facets of one practice rather than isolated destinations."
+        links={[
+          {
+            eyebrow: "Strategy profile",
+            title: "Marketing & Strategy",
+            description:
+              "Audience insight, cultural intelligence, and performance-minded brand strategy.",
+            to: "/strategy/",
+          },
+          {
+            eyebrow: "New page",
+            title: "Music Strategy",
+            description:
+              "A dedicated page for music-led platform thinking, editorial framing, and sonic storytelling.",
+            to: "/music-strategy/",
+          },
+        ]}
+      />
     </div>
   );
 }

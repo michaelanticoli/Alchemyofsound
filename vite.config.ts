@@ -59,6 +59,7 @@ import path from 'path';
           main: path.resolve(__dirname, 'index.html'),
           audioLab: path.resolve(__dirname, 'audio-lab/index.html'),
           strategy: path.resolve(__dirname, 'strategy/index.html'),
+          musicStrategy: path.resolve(__dirname, 'music-strategy/index.html'),
         },
       },
     },
