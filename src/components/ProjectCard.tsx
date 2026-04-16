@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router";
 
 interface ProjectCardProps {
   title: string;
@@ -10,6 +11,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ title, category, description, href, index }: ProjectCardProps) {
+  const isInternalLink = Boolean(href?.startsWith("/"));
   const CardContent = (
     <div className="flex items-start justify-between gap-8">
       <div className="flex-1">
@@ -37,6 +39,24 @@ export function ProjectCard({ title, category, description, href, index }: Proje
       </motion.div>
     </div>
   );
+
+  if (href && isInternalLink) {
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, delay: index * 0.1 }}
+      >
+        <Link
+          to={href}
+          className="group block border-t border-white/10 py-12 cursor-pointer no-underline text-inherit"
+        >
+          {CardContent}
+        </Link>
+      </motion.div>
+    );
+  }
 
   if (href) {
     return (
