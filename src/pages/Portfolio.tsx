@@ -9,6 +9,7 @@ import { QuantumelodicInteractive } from "../components/quantum/QuantumelodicInt
 import { SparkleTrail } from "../components/SparkleTrail";
 import { ContactModal } from "../components/ContactModal";
 import { SiteNav } from "../components/SiteNav";
+import { Link } from "react-router";
 import {
   Mail,
   Github,
