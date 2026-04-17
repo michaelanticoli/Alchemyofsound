@@ -51,7 +51,7 @@ export default function HomebaseGateway() {
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <a
-            href="/portfolio/"
+            href="/portfolio"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-7 py-4 text-sm font-medium uppercase tracking-[0.16em] text-white transition-colors hover:bg-white/10"
           >
             Stay in this repository
@@ -64,17 +64,29 @@ export default function HomebaseGateway() {
           <span>{redirectLabel}</span>
         </div>
 
-        <div className="mt-10 grid gap-3 md:grid-cols-3 text-sm">
-          <a className="rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition-colors" href="/strategy/">
+        <nav aria-label="Internal site destinations" className="mt-10 grid gap-3 md:grid-cols-3 text-sm">
+          <a
+            aria-label="Go to Marketing and Strategy page"
+            className="rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition-colors"
+            href="/strategy/"
+          >
             Marketing &amp; Strategy
           </a>
-          <a className="rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition-colors" href="/music-strategy/">
+          <a
+            aria-label="Go to Music Strategy page"
+            className="rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition-colors"
+            href="/music-strategy/"
+          >
             Music Strategy
           </a>
-          <a className="rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition-colors" href="/audio-lab/">
+          <a
+            aria-label="Go to Audio Lab page"
+            className="rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition-colors"
+            href="/audio-lab/"
+          >
             Audio Lab
           </a>
-        </div>
+        </nav>
       </div>
     </main>
   );
