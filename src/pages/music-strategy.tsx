@@ -256,7 +256,7 @@ export default function MusicStrategy() {
           <SectionHeading
             eyebrow="Capabilities"
             title="Where I add value"
-            body="This page sits beside the broader strategy and audio pages as the part of the practice focused most directly on music, audience, programming, and platform-native storytelling."
+            body="This part of my practice focuses most directly on music, audience behavior, programming, and platform-native storytelling."
           />
 
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
@@ -362,18 +362,18 @@ export default function MusicStrategy() {
       </main>
 
       <RelatedPages
-        title="Move between the connected pages."
-        body="I chose a `/music-strategy/` route instead of a new subdomain so this page could stay inside the same navigation system, visual language, and visitor journey."
+        title="Explore the connected work."
+        body="These adjacent pages show how the music strategy practice connects to broader brand thinking and audio execution."
         links={[
           {
-            eyebrow: "Adjacent page",
+            eyebrow: "Related page",
             title: "Marketing & Strategy",
             description:
               "See the broader strategy profile across brand, audience, and performance work.",
             to: "/strategy/",
           },
           {
-            eyebrow: "Adjacent page",
+            eyebrow: "Related page",
             title: "Audio Lab",
             description:
               "Go deeper into the technical evaluation and communication side of the audio practice.",
