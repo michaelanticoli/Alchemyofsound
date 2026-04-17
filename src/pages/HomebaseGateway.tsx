@@ -66,18 +66,21 @@ export default function HomebaseGateway() {
 
         <nav aria-label="Internal site destinations" className="mt-10 grid gap-3 md:grid-cols-3 text-sm">
           <a
+            aria-label="Open internal Marketing and Strategy page on michaelanticoli.com"
             className="rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition-colors"
             href="/strategy/"
           >
             Marketing &amp; Strategy
           </a>
           <a
+            aria-label="Open internal Music Strategy page on michaelanticoli.com"
             className="rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition-colors"
             href="/music-strategy/"
           >
             Music Strategy
           </a>
           <a
+            aria-label="Open internal Audio Lab page on michaelanticoli.com"
             className="rounded-2xl border border-white/10 p-4 hover:bg-white/5 transition-colors"
             href="/audio-lab/"
           >
