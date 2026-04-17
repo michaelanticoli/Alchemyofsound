@@ -42,6 +42,39 @@ export function RelatedPages({
   links,
 }: RelatedPagesProps) {
   const styles = themeStyles[theme];
+  const cardClassName = cn(
+    "group block rounded-[1.5rem] border p-6 transition-colors",
+    styles.card,
+  );
+
+  const renderCardContent = (link: RelatedPageLink) => (
+    <>
+      <div
+        className={cn(
+          "text-[11px] uppercase tracking-[0.2em] mb-3",
+          styles.eyebrow,
+        )}
+      >
+        {link.eyebrow}
+      </div>
+      <div className="flex items-start justify-between gap-6">
+        <div>
+          <h3 className={cn("text-2xl tracking-tight", styles.title)}>
+            {link.title}
+          </h3>
+          <p className={cn("mt-3 text-sm md:text-base leading-relaxed", styles.body)}>
+            {link.description}
+          </p>
+        </div>
+        <ArrowUpRight
+          className={cn(
+            "w-5 h-5 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1",
+            styles.title,
+          )}
+        />
+      </div>
+    </>
+  );
 
   return (
     <section className="py-24 px-6 lg:px-12">
@@ -82,58 +115,16 @@ export function RelatedPages({
                   href={link.to}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={cn(
-                    "group block rounded-[1.5rem] border p-6 transition-colors",
-                    styles.card,
-                  )}
+                  className={cardClassName}
                 >
-                  <div
-                    className={cn(
-                      "text-[11px] uppercase tracking-[0.2em] mb-3",
-                      styles.eyebrow,
-                    )}
-                  >
-                    {link.eyebrow}
-                  </div>
-                  <div className="flex items-start justify-between gap-6">
-                    <div>
-                      <h3 className={cn("text-2xl tracking-tight", styles.title)}>
-                        {link.title}
-                      </h3>
-                      <p className={cn("mt-3 text-sm md:text-base leading-relaxed", styles.body)}>
-                        {link.description}
-                      </p>
-                    </div>
-                    <ArrowUpRight className={cn("w-5 h-5 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1", styles.title)} />
-                  </div>
+                  {renderCardContent(link)}
                 </a>
               ) : (
                 <Link
                   to={link.to}
-                  className={cn(
-                    "group block rounded-[1.5rem] border p-6 transition-colors",
-                    styles.card,
-                  )}
+                  className={cardClassName}
                 >
-                  <div
-                    className={cn(
-                      "text-[11px] uppercase tracking-[0.2em] mb-3",
-                      styles.eyebrow,
-                    )}
-                  >
-                    {link.eyebrow}
-                  </div>
-                  <div className="flex items-start justify-between gap-6">
-                    <div>
-                      <h3 className={cn("text-2xl tracking-tight", styles.title)}>
-                        {link.title}
-                      </h3>
-                      <p className={cn("mt-3 text-sm md:text-base leading-relaxed", styles.body)}>
-                        {link.description}
-                      </p>
-                    </div>
-                    <ArrowUpRight className={cn("w-5 h-5 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1", styles.title)} />
-                  </div>
+                  {renderCardContent(link)}
                 </Link>
               )}
             </motion.div>
