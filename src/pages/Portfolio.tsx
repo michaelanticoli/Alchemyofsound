@@ -8,6 +8,8 @@ import { Personae } from "../components/Personae";
 import { QuantumelodicInteractive } from "../components/quantum/QuantumelodicInteractive";
 import { SparkleTrail } from "../components/SparkleTrail";
 import { ContactModal } from "../components/ContactModal";
+import { SiteNav } from "../components/SiteNav";
+import { Link } from "react-router";
 import {
   Mail,
   Github,
@@ -18,8 +20,16 @@ import {
   Settings,
 } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
-import { Link } from "react-router";
 import { projectId, publicAnonKey } from "../utils/supabase/info";
+
+const homepageNavLinks = [
+  { label: "Work", href: "#work" },
+  { label: "Marketing & Strategy", href: "/strategy/" },
+  { label: "Music Strategy", href: "/music-strategy/" },
+  { label: "Audio", href: "/audio-lab/" },
+  { label: "About", href: "#about" },
+  { label: "Contact", href: "mailto:michaelanticoli@gmail.com" },
+];
 
 export default function Portfolio() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -108,11 +118,18 @@ export default function Portfolio() {
       href: "https://chromatuner.vercel.app",
     },
     {
+      title: "Music Strategy",
+      category: "Audience Systems / Cultural Strategy",
+      description:
+        "A dedicated profile for music strategy work across audience insight, editorial framing, platform thinking, and sonic storytelling.",
+      href: "/music-strategy/",
+    },
+    {
       title: "Audio Lab",
       category: "Plugin Evaluation / Technical Writing",
       description:
         "A structured protocol for evaluating audio plugins across signal behavior, perceptual impact, workflow integration, and communication value.",
-      href: "https://audio.michaelanticoli.com/audio-lab",
+      href: "/audio-lab/",
     },
   ];
 
@@ -142,43 +159,7 @@ export default function Portfolio() {
       ref={containerRef}
       className="min-h-screen bg-black text-white"
     >
-      {/* Navigation */}
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/50 backdrop-blur-xl"
-      >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3"
-          >
-            <LunarPhase />
-            <span className="tracking-widest uppercase">
-              MICHAEL ANTICOLI
-            </span>
-          </motion.div>
-
-          <nav className="flex items-center gap-6 text-sm uppercase tracking-[0.2em]">
-  <a href="https://michaelanticoli.com#work" className="hover:opacity-70 transition-opacity">
-    Work
-  </a>
-  <a href="https://marketing.michaelanticoli.com" className="hover:opacity-70 transition-opacity">
-    Marketing & Strategy
-  </a>
-  <a href="https://audio.michaelanticoli.com" className="hover:opacity-70 transition-opacity">
-    Audio
-  </a>
-  <a href="https://michaelanticoli.com#about" className="hover:opacity-70 transition-opacity">
-    About
-  </a>
-  <a href="mailto:michaelanticoli@gmail.com" className="hover:opacity-70 transition-opacity">
-    Contact
-  </a>
-</nav>
-        </div>
-      </motion.nav>
+      <SiteNav links={homepageNavLinks} theme="dark" />
 
       {/* Hero Section */}
       <motion.section

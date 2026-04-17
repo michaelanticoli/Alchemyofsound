@@ -8,6 +8,9 @@ import {
   Sparkles,
   Waves,
 } from "lucide-react";
+import { AudioLines } from "lucide-react";
+import { RelatedPages } from "../components/RelatedPages";
+import { SiteNav } from "../components/SiteNav";
 
 const services = [
   {
@@ -165,6 +168,21 @@ export default function AudioLab() {
 
       <main className="px-6 pb-20 pt-10 lg:px-12 lg:pt-16">
         <div className="mx-auto max-w-7xl">
+const globalNavLinks = [
+  { label: "Home", href: "/" },
+  { label: "Marketing & Strategy", href: "/strategy/" },
+  { label: "Music Strategy", href: "/music-strategy/" },
+  { label: "Audio", href: "/audio-lab/" },
+  { label: "Contact", href: "mailto:michaelanticoli@gmail.com" },
+];
+
+export default function AudioLab() {
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <SiteNav links={globalNavLinks} theme="dark" />
+
+      <main className="px-6 lg:px-12 pt-32 pb-16">
+        <div className="max-w-7xl mx-auto space-y-6">
           <motion.section
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -486,6 +504,27 @@ export default function AudioLab() {
           </section>
         </div>
       </main>
+
+      <RelatedPages
+        title="Move between strategy, music, and audio without leaving the flow."
+        body="The site now treats these pages as connected facets of one practice rather than isolated destinations."
+        links={[
+          {
+            eyebrow: "Strategy profile",
+            title: "Marketing & Strategy",
+            description:
+              "Audience insight, cultural intelligence, and performance-minded brand strategy.",
+            to: "/strategy/",
+          },
+          {
+            eyebrow: "New page",
+            title: "Music Strategy",
+            description:
+              "A dedicated page for music-led platform thinking, editorial framing, and sonic storytelling.",
+            to: "/music-strategy/",
+          },
+        ]}
+      />
     </div>
   );
 }
