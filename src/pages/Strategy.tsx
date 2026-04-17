@@ -216,11 +216,12 @@ export default function Strategy() {
           transition={{ duration: 0.8 }}
           className="p-10 md:p-12 rounded-xl border border-border bg-gradient-to-r from-chart-1/10 via-chart-4/10 to-chart-2/10"
         >
-          <h2 className="text-4xl md:text-6xl tracking-tight mb-6">Why this aligns with Art of Sound</h2>
+          <h2 className="text-4xl md:text-6xl tracking-tight mb-6">How I approach the work</h2>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-4xl">
-            Art of Sound's global direction sits exactly where I do my best work: sonic expression,
-            cultural relevance, and strategic marketing outcomes. My approach is culture-first,
-            evidence-backed, and designed to support both long-term brand equity and near-term campaign performance.
+            I work best where sonic expression, cultural relevance, and strategic outcomes need to
+            reinforce each other. My approach is culture-first, evidence-backed, and designed to
+            build long-term brand equity while helping teams make sharper campaign decisions in the
+            present.
           </p>
         </motion.div>
       </section>
