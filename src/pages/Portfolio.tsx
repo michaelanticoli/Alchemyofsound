@@ -314,8 +314,8 @@ export default function Portfolio() {
                 metaphysical philosophy.
               </p>
               <p>
-                He views astrology not as fatalism, but as
-                "Archetypal Systems Architecture"—a rigorous
+                He views concepts like astrology not as fatalistic, 
+                but as "Archetypal Systems Architecture"—a rigorous
                 framework of pattern recognition. By treating
                 celestial mechanics as a dataset of human
                 potential, he builds tools that translate
