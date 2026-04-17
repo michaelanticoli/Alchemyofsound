@@ -19,6 +19,11 @@ const globalNavLinks = [
   { label: "Strategy", href: "/strategy/" },
   { label: "Music Strategy", href: "/music-strategy/" },
   { label: "Audio", href: "/audio-lab/" },
+  {
+    label: "Strategy Portfolio",
+    href: "https://strategy.michaelanticoli.com",
+    external: true,
+  },
   { label: "Contact", href: "mailto:michaelanticoli@gmail.com" },
 ];
 
@@ -366,8 +371,6 @@ export default function MusicStrategy() {
         body="These adjacent pages show how the music strategy practice connects to broader brand thinking and audio execution."
         links={[
           {
-            eyebrow: "Adjacent page",
-            title: "Strategy",
             eyebrow: "Related page",
             title: "Marketing & Strategy",
             description:

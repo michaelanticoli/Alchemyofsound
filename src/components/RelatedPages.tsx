@@ -8,6 +8,7 @@ interface RelatedPageLink {
   title: string;
   description: string;
   to: string;
+  external?: boolean;
 }
 
 interface RelatedPagesProps {
@@ -76,33 +77,65 @@ export function RelatedPages({
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
             >
-              <Link
-                to={link.to}
-                className={cn(
-                  "group block rounded-[1.5rem] border p-6 transition-colors",
-                  styles.card,
-                )}
-              >
-                <div
+              {link.external ? (
+                <a
+                  href={link.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={cn(
-                    "text-[11px] uppercase tracking-[0.2em] mb-3",
-                    styles.eyebrow,
+                    "group block rounded-[1.5rem] border p-6 transition-colors",
+                    styles.card,
                   )}
                 >
-                  {link.eyebrow}
-                </div>
-                <div className="flex items-start justify-between gap-6">
-                  <div>
-                    <h3 className={cn("text-2xl tracking-tight", styles.title)}>
-                      {link.title}
-                    </h3>
-                    <p className={cn("mt-3 text-sm md:text-base leading-relaxed", styles.body)}>
-                      {link.description}
-                    </p>
+                  <div
+                    className={cn(
+                      "text-[11px] uppercase tracking-[0.2em] mb-3",
+                      styles.eyebrow,
+                    )}
+                  >
+                    {link.eyebrow}
                   </div>
-                  <ArrowUpRight className={cn("w-5 h-5 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1", styles.title)} />
-                </div>
-              </Link>
+                  <div className="flex items-start justify-between gap-6">
+                    <div>
+                      <h3 className={cn("text-2xl tracking-tight", styles.title)}>
+                        {link.title}
+                      </h3>
+                      <p className={cn("mt-3 text-sm md:text-base leading-relaxed", styles.body)}>
+                        {link.description}
+                      </p>
+                    </div>
+                    <ArrowUpRight className={cn("w-5 h-5 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1", styles.title)} />
+                  </div>
+                </a>
+              ) : (
+                <Link
+                  to={link.to}
+                  className={cn(
+                    "group block rounded-[1.5rem] border p-6 transition-colors",
+                    styles.card,
+                  )}
+                >
+                  <div
+                    className={cn(
+                      "text-[11px] uppercase tracking-[0.2em] mb-3",
+                      styles.eyebrow,
+                    )}
+                  >
+                    {link.eyebrow}
+                  </div>
+                  <div className="flex items-start justify-between gap-6">
+                    <div>
+                      <h3 className={cn("text-2xl tracking-tight", styles.title)}>
+                        {link.title}
+                      </h3>
+                      <p className={cn("mt-3 text-sm md:text-base leading-relaxed", styles.body)}>
+                        {link.description}
+                      </p>
+                    </div>
+                    <ArrowUpRight className={cn("w-5 h-5 shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1", styles.title)} />
+                  </div>
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>
