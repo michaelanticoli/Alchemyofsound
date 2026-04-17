@@ -34,7 +34,7 @@ export default function HomebaseGateway() {
       <div className="max-w-4xl mx-auto w-full rounded-[2rem] border border-white/10 bg-white/[0.03] p-8 md:p-12">
         <p className="text-xs uppercase tracking-[0.24em] text-white/55">Keystone Hub</p>
         <h1 className="mt-5 text-4xl md:text-6xl tracking-tight leading-[1.04]">
-          michaelanticoli.com now routes through the new Homebase.
+          This site, michaelanticoli.com, now routes through the new Homebase.
         </h1>
         <p className="mt-6 text-base md:text-lg leading-relaxed text-white/70 max-w-3xl">
           The latest primary homepage is hosted at anticoli-homebase.netlify.app. You will be
