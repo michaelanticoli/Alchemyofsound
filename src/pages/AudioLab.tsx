@@ -1,14 +1,11 @@
 import { motion } from "motion/react";
-import { Link } from "react-router";
 import {
-  ArrowLeft,
   ArrowUpRight,
   AudioLines,
   Briefcase,
   Sparkles,
   Waves,
 } from "lucide-react";
-import { AudioLines } from "lucide-react";
 import { RelatedPages } from "../components/RelatedPages";
 import { SiteNav } from "../components/SiteNav";
 
@@ -119,55 +116,6 @@ const closingPoints = [
 const sectionLabel =
   "text-xs font-medium uppercase tracking-[0.22em] text-white/45";
 
-export default function AudioLab() {
-  return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="fixed inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.09),transparent_36%),linear-gradient(180deg,#050505_0%,#090909_45%,#030303_100%)]" />
-        <div className="absolute inset-x-0 top-0 h-[28rem] bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30 [mask-image:linear-gradient(180deg,black,transparent)]" />
-        <div className="absolute left-[-8rem] top-24 h-72 w-72 rounded-full bg-white/8 blur-3xl" />
-        <div className="absolute bottom-20 right-[-10rem] h-80 w-80 rounded-full bg-stone-400/10 blur-3xl" />
-      </div>
-
-      <motion.header
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="sticky top-0 z-50 border-b border-white/10 bg-black/55 backdrop-blur-xl"
-      >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
-          <div className="flex flex-col">
-            <span className="text-sm uppercase tracking-[0.22em]">
-              Michael Anticoli
-            </span>
-            <span className="text-xs uppercase tracking-[0.18em] text-white/40">
-              Sound, Story, Strategy
-            </span>
-          </div>
-
-          <div className="flex items-center gap-5 text-sm uppercase tracking-[0.16em] text-white/60">
-            <a href="#selected-work" className="hidden md:block hover:text-white">
-              Work
-            </a>
-            <a href="#proof" className="hidden md:block hover:text-white">
-              Background
-            </a>
-            <a href="#contact" className="hidden md:block hover:text-white">
-              Contact
-            </a>
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 text-white/75 transition-colors hover:text-white"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              <span>Back</span>
-            </Link>
-          </div>
-        </div>
-      </motion.header>
-
-      <main className="px-6 pb-20 pt-10 lg:px-12 lg:pt-16">
-        <div className="mx-auto max-w-7xl">
 const globalNavLinks = [
   { label: "Home", href: "/" },
   { label: "Strategy", href: "/strategy/" },
@@ -180,7 +128,6 @@ export default function AudioLab() {
   return (
     <div className="min-h-screen bg-black text-white">
       <SiteNav links={globalNavLinks} theme="dark" />
-
       <main className="px-6 lg:px-12 pt-32 pb-16">
         <div className="max-w-7xl mx-auto space-y-6">
           <motion.section
