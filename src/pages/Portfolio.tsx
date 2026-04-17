@@ -24,7 +24,7 @@ import { projectId, publicAnonKey } from "../utils/supabase/info";
 
 const homepageNavLinks = [
   { label: "Work", href: "#work" },
-  { label: "Marketing & Strategy", href: "/strategy/" },
+  { label: "Strategy", href: "/strategy/" },
   { label: "Music Strategy", href: "/music-strategy/" },
   { label: "Audio", href: "/audio-lab/" },
   { label: "About", href: "#about" },
@@ -93,21 +93,21 @@ export default function Portfolio() {
       title: "Natal Harmonic Generator",
       category: "Precision Astronomy / Sound Design",
       description:
-        "Swiss Ephemeris-grade astronomical engine transforming astrological blueprints into personalized harmonic frequencies, sacred scales, and immersive sound rituals with arc-minute precision.",
+        "Experimental music-personalization system designed to translate cyclical patterns and symbolic inputs into sound, scale, and mood.",
       href: "https://sonic-dna.created.app/",
     },
     {
       title: "Quantumelodic Oracle",
       category: "AI / LLM",
       description:
-        "Custom-trained LLM designed to synthesize Oblique Strategies with metaphysical frameworks. It uses stochastic processing to disrupt linear thinking patterns.",
+        "Experimental decision-support tool designed to help creatives, founders, and strategists generate more original ideas and break out of repetitive thinking patterns.",
       href: "https://serene-alpaca-2bfbd6.netlify.app",
     },
     {
       title: "Sonic DNA",
       category: "Generative Art / Audio",
       description:
-        "Identity system that translates biometric and biological inputs into unique sonic signatures, exploring the mathematical relationship between organic data and sound.",
+        "Sonic identity system translating personal or brand characteristics into unique sound signatures for storytelling, branding, and audience engagement.",
       href: "https://neon-paletas-601558.netlify.app",
     },
     {
@@ -183,22 +183,20 @@ export default function Portfolio() {
           >
             <Sparkles className="w-5 h-5" />
             <span>
-              Creative Technologist · Brand Alchemist · Sonic
-              Innovator
+              Strategy · Sound · Storytelling · Audience Systems
             </span>
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight mb-8 leading-[1.1]">
-            Building bridges between
+            I help brands, artists,
             <br />
             <span className="bg-gradient-to-r from-white via-white to-white/50 bg-clip-text text-transparent">
-              Sound, Symbolism, & Code
+              and platforms connect strategy, sound, storytelling, and audience behavior.
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto tracking-wide leading-relaxed">
-            Exploring the architecture of meaning through
-            strategy, sound, and systems of consciousness.
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto tracking-wide leading-relaxed">
+            My work spans brand strategy, sonic identity, music platform thinking, content systems, and creative direction. I build frameworks, campaigns, and experiences that help people understand who they are, what they offer, and why it matters.
           </p>
         </motion.div>
 
@@ -237,8 +235,7 @@ export default function Portfolio() {
             Selected Works
           </h2>
           <p className="text-muted-foreground text-lg md:text-xl max-w-2xl leading-relaxed">
-            A curated collection of projects spanning systems
-            design, machine learning, and interface innovation.
+            A curated selection of tools, frameworks, and creative systems built to make strategy, sound, and storytelling more useful.
           </p>
         </motion.div>
 
