@@ -121,6 +121,11 @@ const globalNavLinks = [
   { label: "Strategy", href: "/strategy/" },
   { label: "Music Strategy", href: "/music-strategy/" },
   { label: "Audio", href: "/audio-lab/" },
+  {
+    label: "Strategy Portfolio",
+    href: "https://strategy.michaelanticoli.com",
+    external: true,
+  },
   { label: "Contact", href: "mailto:michaelanticoli@gmail.com" },
 ];
 

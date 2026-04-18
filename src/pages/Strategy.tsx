@@ -70,6 +70,11 @@ const globalNavLinks = [
   { label: "Strategy", href: "/strategy/" },
   { label: "Music Strategy", href: "/music-strategy/" },
   { label: "Audio", href: "/audio-lab/" },
+  {
+    label: "Strategy Portfolio",
+    href: "https://strategy.michaelanticoli.com",
+    external: true,
+  },
   { label: "Contact", href: "mailto:michaelanticoli@gmail.com" },
 ];
 
@@ -123,6 +128,15 @@ export default function Strategy() {
               className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors"
             >
               Start a conversation
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+            <a
+              href="https://strategy.michaelanticoli.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 border border-border rounded-full hover:bg-accent transition-colors"
+            >
+              View strategy portfolio
               <ArrowUpRight className="w-4 h-4" />
             </a>
             <a
@@ -267,18 +281,19 @@ export default function Strategy() {
         body="This strategy profile now sits inside a connected set of pages covering brand strategy, music strategy, and audio systems work."
         links={[
           {
-            eyebrow: "New page",
+            eyebrow: "Portfolio page",
+            title: "Strategy Portfolio",
+            description:
+              "Open the dedicated strategy portfolio for a cleaner view of marketing, brand, and agency-side experience.",
+            to: "https://strategy.michaelanticoli.com",
+            external: true,
+          },
+          {
+            eyebrow: "Adjacent page",
             title: "Music Strategy",
             description:
               "Explore the audience, editorial, and sonic storytelling side of the work in a dedicated music strategy profile.",
             to: "/music-strategy/",
-          },
-          {
-            eyebrow: "Audio detail",
-            title: "Audio Lab",
-            description:
-              "See the evaluation framework and technical writing approach behind the audio practice.",
-            to: "/audio-lab/",
           },
         ]}
       />
