@@ -27,6 +27,11 @@ const homepageNavLinks = [
   { label: "Strategy", href: "/strategy/" },
   { label: "Music Strategy", href: "/music-strategy/" },
   { label: "Audio", href: "/audio-lab/" },
+  {
+    label: "Strategy Portfolio",
+    href: "https://strategy.michaelanticoli.com",
+    external: true,
+  },
   { label: "About", href: "#about" },
   { label: "Contact", href: "mailto:michaelanticoli@gmail.com" },
 ];
@@ -123,6 +128,13 @@ export default function Portfolio() {
       description:
         "A dedicated profile for music strategy work across audience insight, editorial framing, platform thinking, and sonic storytelling.",
       href: "/music-strategy/",
+    },
+    {
+      title: "Strategy Portfolio",
+      category: "Marketing / Brand / Agency Experience",
+      description:
+        "A focused portfolio page covering brand strategy, campaign thinking, and agency-side marketing experience in a cleaner case-study format.",
+      href: "https://strategy.michaelanticoli.com",
     },
     {
       title: "Audio Lab",
