@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://michaelanticoli.com/sitemap.xml
