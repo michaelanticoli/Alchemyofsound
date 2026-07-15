@@ -10,6 +10,7 @@ export interface FrameworkData {
   href: string;
   images: string[];
   features: string[];
+  videoSrc?: string;
 }
 
 interface FrameworkModalProps {
@@ -114,20 +115,37 @@ export function FrameworkModal({ isOpen, onClose, data }: FrameworkModalProps) {
                     />
                   </div>
 
+                  {/* Video — rendered when present */}
+                  {data.videoSrc && (
+                    <div className="aspect-video w-full rounded-lg overflow-hidden border border-white/10 bg-black">
+                      <video
+                        src={data.videoSrc}
+                        controls
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover opacity-90"
+                      />
+                    </div>
+                  )}
+
                   {/* Grid of smaller images */}
                   <div className="grid grid-cols-2 gap-4">
-                    {data.images.slice(1).map((img, idx) => (
-                      <div
-                        key={idx}
-                        className="aspect-square rounded-lg overflow-hidden border border-white/10 bg-white/5 group"
-                      >
-                        <img
-                          src={img}
-                          alt={`${data.title} detail ${idx + 1}`}
-                          className="w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 hover:scale-105 transform"
-                        />
-                      </div>
-                    ))}
+                    {data.images.slice(1).map((img, idx, arr) => {
+                      const isLast = idx === arr.length - 1;
+                      return (
+                        <div
+                          key={idx}
+                          className={`aspect-square rounded-lg overflow-hidden border border-white/10 group ${isLast ? "bg-black flex items-center justify-center p-4" : "bg-white/5"}`}
+                        >
+                          <img
+                            src={img}
+                            alt={`${data.title} detail ${idx + 1}`}
+                            className={`transition-opacity duration-500 ${isLast ? "w-3/4 h-3/4 object-contain opacity-25 group-hover:opacity-60 invert" : "w-full h-full object-cover opacity-60 group-hover:opacity-100 hover:scale-105 transform"}`}
+                          />
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>

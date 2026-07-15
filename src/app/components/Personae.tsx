@@ -1,24 +1,15 @@
-// Placeholder images - replace with actual uploaded images via admin panel
-const redCasketImage1 =
-  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Red%20casket%20club(4).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9SZWQgY2Fza2V0IGNsdWIoNCkucG5nIiwiaWF0IjoxNzcxNDEyNTc0LCJleHAiOjE3NzE0MTYxNzR9.mOHlkHi3Cv940ZWehJtyIyz0K2u3e5wzfFPDhbaZi_g";
-const redCasketImage2 =
-  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Red%20casket%20club(6).png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9SZWQgY2Fza2V0IGNsdWIoNikucG5nIiwiaWF0IjoxNzcxNDEyNjM4LCJleHAiOjE3NzE0MTYyMzh9.vhbbkcAbCWisZKv32W8MDF-dJJlbfq6kokMYq9LHZK0";
-const redCasketImage3 =
-  "https://nbeqmaskputomiydydag.supabase.co/storage/v1/object/sign/make-b5eacdbd-images/Red%20casket%20club.png?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9jNmQ2MzViOC1jOTU0LTQ1ZjUtYWFlMS00NmIzYjg2ZTk4NTciLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJtYWtlLWI1ZWFjZGJkLWltYWdlcy9SZWQgY2Fza2V0IGNsdWIucG5nIiwiaWF0IjoxNzcxNDEyNjY3LCJleHAiOjE3NzE0MTYyNjd9.8Y-tWYAN2eLARXGDp9awpXaKcHo7Tkcpx3ZZ95b9_fA";
-const silasGoghImage1 =
-  "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1080";
-const silasGoghImage2 =
-  "https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1080";
-const silasGoghImage3 =
-  "https://images.unsplash.com/photo-1445985543470-41fba5c3144a?q=80&w=1080";
-const brokebackImage1 =
-  "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1080";
-const brokebackImage2 =
-  "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1080";
-const nadiaBiznessImage =
-  "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?q=80&w=1080";
-const angBoccaImage =
-  "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1080";
+import imgBrokeback from "../../imports/brokeback.png";
+import imgNadiaBizness from "../../imports/nadia-business.png";
+import imgRedCasket from "../../imports/red_casket_club.png";
+import imgAngBocca from "../../imports/ang_bocca_artist.png";
+import imgSilasGogh from "../../imports/silas_gogh_artist.jpg";
+import imgAmonAjari from "../../imports/SERVING_IN_THIS_BODY.png";
+import audioAngBocca from "../../imports/Ang_Bocca_-_Drunk_In_New_Jersey__On_One_.mp3?url";
+import audioBrokeback from "../../imports/Brokeback_Kerouac_-_Semicircle_Rooms.mp3?url";
+import audioSilasGogh from "../../imports/Andres__Silas_Gogh_Mix_.m4a?url";
+import audioRedCasket from "../../imports/teeny_tiny_.mp3?url";
+import audioNadiaBizness from "../../imports/Chic_Nights___A_Peaceful_World.mp3?url";
+import audioAmonAjari from "../../imports/amon-ajari.mp3?url";
 import { motion } from "motion/react";
 import {
   Mic2,
@@ -41,9 +32,9 @@ const personae: PersonaData[] = [
     desc: "AI-hybridized synth-pop vocalist exploring human-machine synthesis through melodic structures and lyrical introspection.",
     longDesc:
       "Ang Bocca represents the intersection of organic vocal performance and artificial intelligence processing. This synth-pop entity investigates the blurred boundary between human expression and machine learning, utilizing AI-enhanced production to create emotional resonance within digital frameworks. The project explores identity, embodiment, and the future of collaborative creativity.",
-    trackTitle: "Red Light",
-    audioSrc: "ang-bocca.mp3", // Upload this file at /admin/audio
-    image: angBoccaImage,
+    trackTitle: "Drunk In New Jersey (On One)",
+    audioSrc: audioAngBocca,
+    image: imgAngBocca,
     icon: Mic2,
     traits: [
       "Synth Pop",
@@ -59,10 +50,9 @@ const personae: PersonaData[] = [
     desc: "Introspective southern soul crooner channeling melancholy intelligence through emotionally sophisticated vocal architecture.",
     longDesc:
       "Silas Gogh embodies the contemplative depth of southern soul tradition filtered through modern existential inquiry. With a voice that carries both warmth and world-weariness, this persona explores themes of longing, loss, and the quiet intelligence of heartbreak. The sonic palette blends classic soul instrumentation with contemporary production sensibilities—smart, sexy, and unapologetically introspective.",
-    trackTitle: "",
-    audioSrc: "silas-gogh.mp3", // Upload this file at /admin/audio
-    image: silasGoghImage1,
-    images: [silasGoghImage1, silasGoghImage2, silasGoghImage3],
+    trackTitle: "Andres (Silas Gogh Mix)",
+    audioSrc: audioSilasGogh,
+    image: imgSilasGogh,
     icon: FileText,
     traits: ["Soul", "Melancholic", "Intelligent", "Emotive"],
     // Launching this month - link coming soon
@@ -73,14 +63,12 @@ const personae: PersonaData[] = [
     desc: "Four brothers lost in a Polynesian plane crash, now channeling beachy psychedelic hauntings through laid-back Hawaiian reverie.",
     longDesc:
       "Red Casket Club is a ghost story set to music. Born from tragedy—four brothers whose lives ended in a plane crash during a holiday in Polynesia—this spectral collective produces music that feels simultaneously sun-drenched and otherworldly. The sound is beachy yet haunting, psychedelic yet grounded, classic yet timeless. Drawing from Hawaiian slack-key guitar traditions, vintage surf rock, and cosmic Americana, Red Casket Club exists in the liminal space between memory and myth.",
-    trackTitle: "",
-    audioSrc: "red-casket-club.mp3", // Upload this file at /admin/audio
-    image: redCasketImage1,
-    images: [redCasketImage1, redCasketImage2, redCasketImage3],
+    trackTitle: "Teeny Tiny",
+    audioSrc: audioRedCasket,
+    image: imgRedCasket,
     icon: Music,
     traits: ["Psychedelic", "Beachy", "Haunting", "Hawaiian"],
-    spotifyUrl:
-      "https://open.spotify.com/artist/red-casket-club", // Update with real link
+    siteUrl: "https://red-casket-club.lovable.app",
   },
   {
     name: "Brokeback Kerouac",
@@ -88,10 +76,9 @@ const personae: PersonaData[] = [
     desc: "Cabin-in-the-woods singer-songwriter merging anthemic Americana with avant-garde chamber pop and experimental sampling.",
     longDesc:
       "Brokeback Kerouac is the sound of isolation transformed into intimacy. Recorded in rustic solitude, this project combines the raw authenticity of Appalachian folk traditions with the conceptual ambition of chamber pop and the textural innovation of modern sampling. Think lonesome highways meeting string quartets, campfire stories deconstructed through tape loops, and the American mythos reimagined through queer sensibility and intellectual rigor.",
-    trackTitle: "",
-    audioSrc: "brokeback-kerouac.mp3", // Upload this file at /admin/audio
-    image: brokebackImage2,
-    images: [brokebackImage2, brokebackImage1],
+    trackTitle: "Semicircle Rooms",
+    audioSrc: audioBrokeback,
+    image: imgBrokeback,
     icon: Smile,
     traits: [
       "Americana",
@@ -107,9 +94,9 @@ const personae: PersonaData[] = [
     desc: "Upbeat dance music architect and innovative remix strategist—from ghostwritten political circuit anthems to club-ready dubs.",
     longDesc:
       "Nadia Bizness is pure kinetic energy compressed into BPM. This production persona specializes in high-octane dance music, inventive remixes, and genre-defying club constructions. Notable work includes ghostwriting for 'Amon Ajari'—a radical circuit music project setting Alexandria Ocasio-Cortez speeches to original production. Nadia operates at the intersection of political theater and dancefloor catharsis, proving that activism and hedonism need not be mutually exclusive.",
-    trackTitle: "",
-    audioSrc: "nadia-bizness.mp3", // Upload this file at /admin/audio
-    image: nadiaBiznessImage,
+    trackTitle: "Chic Nights / A Peaceful World",
+    audioSrc: audioNadiaBizness,
+    image: imgNadiaBizness,
     icon: ShoppingBag,
     traits: ["Circuit", "Dance", "Remix", "Political"],
     spotifyUrl: "https://open.spotify.com/artist/nadia-bizness", // Update with real link
@@ -120,10 +107,9 @@ const personae: PersonaData[] = [
     desc: "Circuit music manifestation of progressive political discourse—Alexandria Ocasio-Cortez speeches transmuted into dancefloor activism.",
     longDesc:
       "Amon Ajari is an experiment in radical contextualization. By taking the impassioned speeches of Alexandria Ocasio-Cortez and setting them to original circuit music production (ghostwritten by Nadia Bizness), this project transforms political rhetoric into embodied experience. The result is music that makes you move while it makes you think—a sonic demonstration that policy and passion, intellect and ecstasy, can coexist on the same dance floor.",
-    trackTitle: "",
-    audioSrc: "amon-ajari.mp3", // Upload this file at /admin/audio
-    image:
-      "https://images.unsplash.com/photo-1672607608405-9a6353ca4b15?q=80&w=1080",
+    trackTitle: "Serving In This Body",
+    audioSrc: audioAmonAjari,
+    image: imgAmonAjari,
     icon: Globe,
     traits: ["Political", "Circuit", "Activist", "Innovative"],
     spotifyUrl: "https://open.spotify.com/artist/amon-ajari", // Update with real link
@@ -171,8 +157,14 @@ export function Personae() {
               onClick={() => setSelectedPersona(persona)}
               className="group relative h-64 p-8 rounded-2xl border border-white/10 bg-black overflow-hidden hover:border-white/30 transition-colors cursor-pointer"
             >
-              {/* Background noise/texture */}
-              <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] pointer-events-none" />
+              {/* Persona image */}
+              <img
+                src={persona.image as string}
+                alt={persona.name}
+                className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-45 transition-opacity duration-500 scale-105 group-hover:scale-100 transition-transform"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30 pointer-events-none" />
 
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div className="flex justify-between items-start">

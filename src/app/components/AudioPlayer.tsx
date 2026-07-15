@@ -1,12 +1,14 @@
 import { useState, useRef, useEffect } from "react";
 import { Play, Pause, Volume2, VolumeX } from "lucide-react";
 import { motion } from "motion/react";
-import { projectId, publicAnonKey } from "../utils/supabase/info";
 
 interface AudioPlayerProps {
   src: string;
   title?: string;
 }
+
+const isValidAudioUrl = (s: string) =>
+  s.startsWith("http://") || s.startsWith("https://") || s.startsWith("/");
 
 export function AudioPlayer({ src, title }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -17,48 +19,18 @@ export function AudioPlayer({ src, title }: AudioPlayerProps) {
   const [waveformData, setWaveformData] = useState<Uint8Array>(new Uint8Array(64));
   const [dominantFrequency, setDominantFrequency] = useState(0);
   const [loadError, setLoadError] = useState(false);
-  const [audioUrl, setAudioUrl] = useState<string>("");
-  
+
+  const audioUrl = isValidAudioUrl(src) ? src : "";
+
   const audioRef = useRef<HTMLAudioElement>(null);
   const audioContextRef = useRef<AudioContext | null>(null);
   const analyserRef = useRef<AnalyserNode | null>(null);
   const sourceRef = useRef<MediaElementAudioSourceNode | null>(null);
   const animationFrameRef = useRef<number>();
 
-  // Fetch audio URL from Supabase Storage
-  useEffect(() => {
-    const fetchAudioUrl = async () => {
-      try {
-        const response = await fetch(
-          `https://${projectId}.supabase.co/functions/v1/make-server-b5eacdbd/audio/${src}`,
-          {
-            headers: {
-              Authorization: `Bearer ${publicAnonKey}`,
-            },
-          }
-        );
-        
-        if (response.ok) {
-          const data = await response.json();
-          setAudioUrl(data.url);
-          setLoadError(false);
-        } else {
-          console.error("Failed to fetch audio URL:", response.status);
-          setLoadError(true);
-        }
-      } catch (error) {
-        console.error("Error fetching audio URL:", error);
-        setLoadError(true);
-      }
-    };
-
-    if (src) {
-      fetchAudioUrl();
-    }
-  }, [src]);
-
   // Initialize Web Audio API for visualization
   useEffect(() => {
+    if (!audioUrl || !audioRef.current || sourceRef.current) return;
     if (audioRef.current && !sourceRef.current) {
       try {
         const AudioContext = window.AudioContext || (window as any).webkitAudioContext;
@@ -188,7 +160,7 @@ export function AudioPlayer({ src, title }: AudioPlayerProps) {
 
   return (
     <div className="w-full bg-black/60 border border-white/10 rounded-xl overflow-hidden backdrop-blur-md">
-      {loadError ? (
+      {!audioUrl || loadError ? (
         <div className="p-8 text-center space-y-3">
           <div className="w-12 h-12 rounded-full bg-red-500/10 border border-red-500/30 flex items-center justify-center mx-auto">
             <VolumeX className="w-6 h-6 text-red-400" />

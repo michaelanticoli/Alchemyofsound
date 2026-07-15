@@ -14,8 +14,9 @@ export interface PersonaData {
   images?: string[]; // Optional array for multiple images
   icon: any; // Lucide icon component
   traits: string[];
-  spotifyUrl?: string; // Optional Spotify link
-  appleMusicUrl?: string; // Optional Apple Music link
+  spotifyUrl?: string;
+  appleMusicUrl?: string;
+  siteUrl?: string;
 }
 
 interface PersonaModalProps {
@@ -110,6 +111,44 @@ export function PersonaModal({ isOpen, onClose, data }: PersonaModalProps) {
                       ))}
                     </div>
                   </div>
+
+                  {(data.siteUrl || data.spotifyUrl || data.appleMusicUrl) && (
+                    <div className="flex flex-wrap gap-3">
+                      {data.siteUrl && (
+                        <a
+                          href={data.siteUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-xs font-mono text-white/70 hover:text-white transition-colors"
+                        >
+                          <Globe className="w-3 h-3" />
+                          Site
+                        </a>
+                      )}
+                      {data.spotifyUrl && (
+                        <a
+                          href={data.spotifyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-xs font-mono text-white/70 hover:text-white transition-colors"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                          Spotify
+                        </a>
+                      )}
+                      {data.appleMusicUrl && (
+                        <a
+                          href={data.appleMusicUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 text-xs font-mono text-white/70 hover:text-white transition-colors"
+                        >
+                          <ExternalLink className="w-3 h-3" />
+                          Apple Music
+                        </a>
+                      )}
+                    </div>
+                  )}
 
                   <div className="pt-4 border-t border-white/10">
                     <h3 className="text-xs font-bold uppercase tracking-widest text-white/30 mb-4">

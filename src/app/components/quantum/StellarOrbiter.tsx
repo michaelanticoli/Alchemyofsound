@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "motion/react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { Play, Pause, RotateCcw, Settings, ExternalLink, Sparkles } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "../ui/dialog";
 import { Slider } from "../ui/slider";
@@ -148,7 +148,6 @@ export function StellarOrbiter() {
   const [selectedPlanet, setSelectedPlanet] = useState<Planet | null>(null);
   const [showControls, setShowControls] = useState(false);
   const [time, setTime] = useState(0);
-  const [aspects, setAspects] = useState<Aspect[]>([]);
   const [containerSize, setContainerSize] = useState({ width: 800, height: 400 });
   const requestRef = useRef<number>();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -197,37 +196,31 @@ export function StellarOrbiter() {
     return ((geocentricAngle * 180 / Math.PI) % 360 + 360) % 360;
   };
 
-  // Detect aspects based on geocentric positions
-  useEffect(() => {
+  // Derive aspects from current time — no setState, no infinite loop
+  const aspects = useMemo(() => {
     const detectedAspects: Aspect[] = [];
-    
     PLANETS.forEach((p1, i) => {
       PLANETS.forEach((p2, j) => {
-        if (i >= j) return; // Avoid duplicates
-        
+        if (i >= j) return;
         const angle1 = calculateGeocentricAngle(p1);
         const angle2 = calculateGeocentricAngle(p2);
-        
         let angleDiff = Math.abs(angle1 - angle2);
         if (angleDiff > 180) angleDiff = 360 - angleDiff;
-        
         ASPECT_TYPES.forEach(aspectType => {
-          const diff = Math.abs(angleDiff - aspectType.angle);
-          if (diff <= aspectType.tolerance) {
+          if (Math.abs(angleDiff - aspectType.angle) <= aspectType.tolerance) {
             detectedAspects.push({
               planet1: p1.id,
               planet2: p2.id,
               angle: angleDiff,
               type: aspectType.name,
-              color: aspectType.color
+              color: aspectType.color,
             });
           }
         });
       });
     });
-    
-    setAspects(detectedAspects);
-  }, [time]);
+    return detectedAspects;
+  }, [time]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const calculatePosition = (planet: Planet) => {
     if (planet.distance === 0) return { x: 0, y: 0 };

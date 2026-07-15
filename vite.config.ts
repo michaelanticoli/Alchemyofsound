@@ -24,6 +24,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  assetsInclude: ['**/*.mp4', '**/*.m4a', '**/*.mp3', '**/*.wav', '**/*.ogg'],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src/app'),

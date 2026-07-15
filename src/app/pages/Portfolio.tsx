@@ -14,22 +14,19 @@ import {
   Linkedin,
   Sparkles,
   Globe,
+  ArrowRight,
   Instagram,
   Settings,
 } from "lucide-react";
-import { useRef, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router";
 import { projectId, publicAnonKey } from "../utils/supabase/info";
 
 export default function Portfolio() {
-  const containerRef = useRef<HTMLDivElement>(null);
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   const [profileImage, setProfileImage] = useState<string | null>(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
+
+  const { scrollYProgress } = useScroll();
 
   const opacity = useTransform(
     scrollYProgress,
@@ -87,13 +84,6 @@ export default function Portfolio() {
       href: "https://sonic-dna.created.app/",
     },
     {
-      title: "Quantumelodic Oracle",
-      category: "AI / LLM",
-      description:
-        "Custom-trained LLM designed to synthesize Oblique Strategies with metaphysical frameworks. It uses stochastic processing to disrupt linear thinking patterns.",
-      href: "https://serene-alpaca-2bfbd6.netlify.app",
-    },
-    {
       title: "Sonic DNA",
       category: "Generative Art / Audio",
       description:
@@ -106,6 +96,13 @@ export default function Portfolio() {
       description:
         "Web-based instrument for spectrum-to-frequency translation. Investigates the physics of light and sound as parallel expressions of harmonic law.",
       href: "https://orange-chamois-768607.hostingersite.com",
+    },
+    {
+      title: "The Manhasset Revue",
+      category: "Human-AI Composition",
+      description:
+        "A full album conceived and completed in a single day—every lyric, melody, and arrangement authored by hand, then realized through AI generation. A study in creative velocity and human-machine collaboration.",
+      href: "https://on.soundcloud.com/6TA7R5E558Yrcrfv73",
     },
   ];
 
@@ -132,8 +129,7 @@ export default function Portfolio() {
 
   return (
     <div
-      ref={containerRef}
-      className="min-h-screen bg-black text-white"
+      className="relative min-h-screen bg-black text-white"
     >
       {/* Navigation */}
       <motion.nav
@@ -271,10 +267,103 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Quantumelodic Interactive Lab */}
-      <QuantumelodicInteractive />
-
       <Personae />
+
+      {/* Everything Is Singing — Book Feature */}
+      <section className="py-32 px-6 lg:px-12 max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9 }}
+          className="relative rounded-2xl border border-white/10 overflow-hidden"
+        >
+          {/* Background field */}
+          <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-white/[0.02]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.04),transparent_60%)]" />
+
+          <div className="relative z-10 grid lg:grid-cols-2 gap-0">
+            {/* Left — identity block */}
+            <div className="p-10 md:p-16 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10">
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-8">
+                  <span className="text-[10px] uppercase tracking-[0.25em] text-white/50 font-mono">Published Work</span>
+                </div>
+                <p className="text-xs font-mono text-white/30 uppercase tracking-[0.2em] mb-3">Michael Anticoli</p>
+                <h2 className="text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight text-white leading-none mb-6">
+                  Everything<br />Is Singing
+                </h2>
+                <p className="text-white/50 text-sm font-mono uppercase tracking-widest mb-8">
+                  Sound · Resonance · Frequency · Physics · Music
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed max-w-md">
+                  A unified theory of vibration — tracing the harmonic laws that govern acoustics, perception, and meaning from the subatomic to the cosmic. The theoretical framework underlying the entire practice.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-3 mt-10">
+                <a
+                  href="https://everything-is-singing.lovable.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-xs font-mono uppercase tracking-widest hover:bg-white/90 transition-colors"
+                >
+                  <Globe className="w-3.5 h-3.5" />
+                  Read Online
+                </a>
+                <a
+                  href="https://a.co/d/08BE56CB"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/5 text-white/70 text-xs font-mono uppercase tracking-widest hover:bg-white/10 hover:text-white transition-colors"
+                >
+                  <ArrowRight className="w-3.5 h-3.5" />
+                  Order on Amazon
+                </a>
+              </div>
+            </div>
+
+            {/* Right — cover + data field */}
+            <div className="p-10 md:p-16 flex flex-col justify-center gap-8">
+              {/* Book cover */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.97 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="flex justify-center"
+              >
+                <img
+                  src="https://everything-is-singing.lovable.app/assets/book-cover-DUvZDZ_C.jpg"
+                  alt="Everything Is Singing — book cover"
+                  className="w-48 md:w-56 rounded-lg shadow-2xl shadow-black/60 ring-1 ring-white/10"
+                />
+              </motion.div>
+
+              {[
+                { glyph: "∿", label: "Acoustic Physics", body: "The mathematics of wave propagation, resonance chambers, and the standing waves that give matter its apparent solidity." },
+                { glyph: "◈", label: "Harmonic Perception", body: "How the nervous system decodes frequency ratios into emotion, memory, and felt meaning — the neuroscience of listening." },
+                { glyph: "⊕", label: "Cosmic Resonance", body: "Kepler's music of the spheres reframed through modern astrophysics — orbital frequencies as macro-scale harmonic law." },
+              ].map(({ glyph, label, body }) => (
+                <motion.div
+                  key={label}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  className="flex gap-5"
+                >
+                  <span className="text-2xl text-white/20 leading-none mt-0.5 font-mono">{glyph}</span>
+                  <div>
+                    <p className="text-xs font-mono uppercase tracking-widest text-white/50 mb-1.5">{label}</p>
+                    <p className="text-white/40 text-sm leading-relaxed">{body}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+      </section>
 
       {/* Skills Section */}
       <section className="py-32 px-6 lg:px-12 max-w-7xl mx-auto">
@@ -295,6 +384,9 @@ export default function Portfolio() {
 
         <SkillOrbit skills={skills} />
       </section>
+
+      {/* Quantumelodic Interactive Lab — supplementary */}
+      <QuantumelodicInteractive />
 
       {/* About Section */}
       <section
